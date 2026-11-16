@@ -1,0 +1,49 @@
+name: Auto-Sync & Deploy Live Cloud GPU Rental Rates
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "15 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fetch live multi-cloud GPU prices, stock & daily history snapshot
+        run: python3 scripts/sync_gpu_rates.py
+      - name: Commit updated gpu_rates.json and history archive
+        run: |
+          git config user.name "GPURentalRates Bot"
+          git config user.email "bot@gpurentalrates.com"
+          git add public/gpu_rates.json public/history/
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(rates): auto-sync live cloud GPU pricing & daily history [skip ci]"
+            git pull --rebase -X ours origin main
+            git push origin HEAD:main
+          fi
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static site artifact (public/)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "public"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

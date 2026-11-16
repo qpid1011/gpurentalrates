@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GPU Rental Rates (2026 Live) — H100, H200, B200, B300 &amp; RTX 5090 Cloud Price Index</title>
+  <meta name="description" content="Real-time hourly cloud GPU rental rates across 22 providers (Lambda, Nebius, Crusoe, Hyperstack, Voltage Park, AWS, GCP). Compare B300, B200, H200, H100, A100 &amp; RTX 5090 prices and calculate cluster training costs." />
+  <link rel="canonical" href="https://gpurentalrates.com/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Live Cloud GPU Rental Rates Index (B300, B200, H200, H100, A100, RTX 5090/4090)",
+    "description": "Normalized hourly per-GPU and multi-GPU cluster rental rates and regional stock across 22 NeoCloud, Bare-Metal, and Hyperscaler providers.",
+    "url": "https://gpurentalrates.com/",
+    "keywords": ["gpu rental rates", "h100 rental price", "b200 cloud price", "h200 hourly rate", "gpu cluster cost calculator"]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-alt: #0b1220;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --row-hover: rgba(56, 189, 248, 0.06);
+    }
+    html.light-theme, body.light-theme {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --border: #cbd5e1;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --accent: #0369a1;
+      --row-hover: #f1f5f9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .acq-banner {
+      background: #fef9c3;
+      color: #1e293b;
+      border-bottom: 1px solid #eab308;
+      padding: 8px 20px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .acq-cta {
+      background: #0f172a;
+      color: #ffffff;
+      border: 1px solid #0f172a;
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-size: 0.77rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .brand h1 { margin: 0; font-size: 1.24rem; font-weight: 900; letter-spacing: -0.02em; }
+    .live-pill {
+      background: #d9f99d;
+      color: #1a2e05;
+      border: 1px solid #65a30d;
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+    .btn {
+      background: var(--surface-alt);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn-primary { background: #0369a1; color: #ffffff; border-color: #0369a1; }
+    html.light-theme .btn-primary, body.light-theme .btn-primary { background: #0f172a; color: #ffffff; border-color: #0f172a; }
+
+    .container { max-width: 1380px; margin: 22px auto 64px; padding: 0 20px; }
+    .hero { margin-bottom: 18px; }
+    .hero h2 { margin: 0 0 6px; font-size: 1.55rem; font-weight: 900; letter-spacing: -0.02em; }
+    .hero p { margin: 0; color: var(--text-muted); font-size: 0.92rem; }
+
+    .gpu-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+      gap: 11px;
+      margin-bottom: 20px;
+    }
+    .gcard {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 15px;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+    .gcard:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .gcard.active { border: 2px solid var(--accent); }
+    .gcard-title { font-size: 0.82rem; font-weight: 800; color: var(--text-muted); }
+    .gcard-price { font-size: 1.42rem; font-weight: 900; margin: 4px 0; color: var(--text); }
+    .gcard-sub { font-size: 0.75rem; color: var(--text-muted); }
+
+    .calc-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+    }
+    .calc-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+    .preset-row { display: flex; flex-wrap: wrap; gap: 7px; }
+    .preset-btn {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .preset-btn:hover { border-color: var(--accent); }
+    .calc-controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .field label { display: block; font-size: 0.76rem; font-weight: 800; color: var(--text-muted); margin-bottom: 5px; }
+    .ctrl-input {
+      width: 100%;
+      padding: 8px 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+    .ctrl-input::placeholder { color: var(--text-muted); opacity: 0.88; }
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .res-box {
+      padding: 11px 14px;
+      border-radius: 10px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+    }
+    .res-lbl { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); }
+    .res-val { font-size: 1.32rem; font-weight: 900; margin-top: 3px; color: var(--text); }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .filter-group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 11px 13px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+    th { background: var(--surface-alt); font-size: 0.77rem; font-weight: 800; }
+    tr:hover td { background: var(--row-hover); }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+    .b-stock { background: #064e3b; color: #a7f3d0; border: 1px solid #10b981; }
+    html.light-theme .b-stock, body.light-theme .b-stock { background: #d1fae5; color: #065f46; border: 1px solid #10b981; }
+
+    .b-wait { background: #1e293b; color: #cbd5e1; border: 1px solid #64748b; }
+    html.light-theme .b-wait, body.light-theme .b-wait { background: #f1f5f9; color: #334155; border: 1px solid #94a3b8; }
+
+    .b-save { background: #14532d; color: #bbf7d0; border: 1px solid #22c55e; }
+    html.light-theme .b-save, body.light-theme .b-save { background: #dcfce7; color: #166534; border: 1px solid #22c55e; }
+
+    .b-ref { background: #451a03; color: #fde68a; border: 1px solid #f59e0b; }
+    html.light-theme .b-ref, body.light-theme .b-ref { background: #fef3c7; color: #92400e; border: 1px solid #d97706; }
+
+    .faq-section {
+      margin-top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .faq-section h3 { margin-top: 0; font-size: 1.05rem; }
+    .footer {
+      margin-top: 26px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .hidden-stage { display: none !important; }
+
+    /* Turnkey Acquisition Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      z-index: 90;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-card {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      max-width: 620px;
+      width: 100%;
+      padding: 22px 24px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.28);
+    }
+  </style>
+</head>
+<body class="light-theme">
+  <div id="acq-top-banner" class="acq-banner hidden-stage">
+    <span>⚡ <strong>Turnkey Digital Asset Available:</strong> Acquire <code>GPURentalRates.com</code> (Exact-Match Search Domain + Zero-Server Live Price Tracker Codebase).</span>
+    <button class="acq-cta" onclick="openModal(true)">View Turnkey Package &amp; Inquire →</button>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>⚡ GPURentalRates<span style="color:var(--accent);">.com</span></h1>
+      <span class="live-pill">LIVE INDEX · 22 CLOUDS</span>
+      <span id="updated-stamp" style="font-size:0.78rem;color:var(--text-muted);font-weight:600;">Loading feed...</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <button class="btn" onclick="exportCsv()">📥 Export CSV</button>
+      <button id="acq-nav-btn" class="btn btn-primary hidden-stage" onclick="openModal(true)">💼 Acquire Site</button>
+      <button id="theme-btn" class="btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Live Cloud GPU Rental Rates &amp; Cluster Cost Calculator</h2>
+      <p>Normalized per-GPU hourly pricing (<code>$/GPU/hr</code>), multi-GPU NVLink cluster totals, and real-time datacenter stock across 22 NeoCloud, Bare-Metal, and Hyperscaler providers.</p>
+    </section>
+
+    <section id="gpu-summary-cards" class="gpu-cards"></section>
+
+    <section class="calc-panel">
+      <div class="calc-header">
+        <strong style="font-size:1rem;">🧮 Training &amp; Inference Cluster Cost Estimator</strong>
+        <div class="preset-row">
+          <button class="preset-btn" onclick="applyPreset('H100', 8, 72)">70B Fine-Tune (8× H100 · 72h)</button>
+          <button class="preset-btn" onclick="applyPreset('B200', 8, 168)">Blackwell Pre-Train (8× B200 · 1wk)</button>
+          <button class="preset-btn" onclick="applyPreset('H200', 4, 730)">24/7 Prod vLLM (4× H200 · 1mo)</button>
+          <button class="preset-btn" onclick="applyPreset('RTX4090', 2, 40)">Indie LoRA / Batch (2× 4090 · 40h)</button>
+        </div>
+      </div>
+      <div class="calc-controls">
+        <div class="field">
+          <label for="calc-gpu">GPU Architecture</label>
+          <select id="calc-gpu" class="ctrl-input" onchange="updateCalculator()"></select>
+        </div>
+        <div class="field">
+          <label for="calc-count">Total GPUs Needed</label>
+          <select id="calc-count" class="ctrl-input" onchange="updateCalculator()">
+            <option value="1">1× GPU</option>
+            <option value="2">2× GPUs</option>
+            <option value="4">4× GPUs</option>
+            <option value="8" selected>8× GPUs (1 Full Node)</option>
+            <option value="16">16× GPUs (2 Nodes)</option>
+            <option value="32">32× GPUs (4 Nodes)</option>
+            <option value="64">64× GPUs (8 Nodes)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="calc-hours">Runtime Duration (Hours)</label>
+          <input id="calc-hours" class="ctrl-input" type="number" min="1" max="8760" value="72" oninput="updateCalculator()" />
+        </div>
+      </div>
+      <div class="calc-results">
+        <div class="res-box">
+          <div class="res-lbl">Lowest Verified NeoCloud Total</div>
+          <div id="res-low" class="res-val">-</div>
+          <div id="res-low-sub" style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">-</div>
+        </div>
+        <div class="res-box">
+          <div class="res-lbl">Market Median NeoCloud Total</div>
+          <div id="res-med" class="res-val">-</div>
+          <div id="res-med-sub" style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">-</div>
+        </div>
+        <div class="res-box">
+          <div class="res-lbl">Hyperscaler On-Demand List</div>
+          <div id="res-ref" class="res-val">-</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">AWS / GCP standard list rate</div>
+        </div>
+        <div class="res-box">
+          <div class="res-lbl">Estimated Net Cloud Savings</div>
+          <div id="res-save" class="res-val">-</div>
+          <div id="res-vram" style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">-</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-bar">
+      <div class="filter-group">
+        <select id="flt-gpu" class="ctrl-input" style="width:auto;" onchange="renderOffers()">
+          <option value="ALL">All GPU Models</option>
+        </select>
+        <select id="flt-num" class="ctrl-input" style="width:auto;" onchange="renderOffers()">
+          <option value="ALL">Any Node Size (1×–8×)</option>
+          <option value="1">1× Single GPU</option>
+          <option value="2">2× GPUs</option>
+          <option value="4">4× GPUs</option>
+          <option value="8">8× Cluster Node</option>
+        </select>
+        <label style="display:inline-flex;align-items:center;gap:6px;font-size:0.83rem;font-weight:700;cursor:pointer;">
+          <input id="flt-stock" type="checkbox" onchange="renderOffers()" />
+          🟢 In-Stock Right Now Only
+        </label>
+      </div>
+      <div class="filter-group">
+        <input id="flt-search" class="ctrl-input" style="width:240px;" type="text" placeholder="Search provider, SXM5, NVLink..." oninput="renderOffers()" />
+        <span id="offer-count-lbl" style="font-size:0.8rem;font-weight:700;color:var(--text-muted);">0 offers</span>
+      </div>
+    </section>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Provider &amp; Tier</th>
+          <th>GPU Model &amp; VRAM</th>
+          <th>Config &amp; Interconnect</th>
+          <th>Price / GPU / hr</th>
+          <th>Total Node / hr</th>
+          <th>Live Stock &amp; Regions</th>
+        </tr>
+      </thead>
+      <tbody id="offers-tbody">
+        <tr><td colspan="6" style="text-align:center;padding:30px;">Loading live cloud GPU rates...</td></tr>
+      </tbody>
+    </table>
+
+    <section class="faq-section">
+      <h3>Frequently Asked Questions — Cloud GPU Rental Pricing</h3>
+      <p style="font-size:0.86rem;"><strong>1. What is the cheapest H100 and B200 hourly rental rate right now?</strong><br/>
+      Specialized NeoCloud and Bare-Metal providers currently offer NVIDIA H100 80GB instances starting around <code>$1.66–$2.30/GPU/hr</code> and NVIDIA B200 192GB instances from <code>$3.74–$6.52/GPU/hr</code>, saving 64%–81% compared to standard Hyperscaler on-demand rates.</p>
+      <p style="font-size:0.86rem;margin-bottom:0;"><strong>2. When should I choose SXM5 NVLink over PCIe GPUs?</strong><br/>
+      For multi-GPU distributed pre-training or full-parameter fine-tuning (e.g., 70B+ models across 4× or 8× GPUs), SXM5 with NVLink/NVSwitch avoids gradient synchronization bottlenecks. For single-GPU inference, LoRA fine-tuning, or batch rendering, PCIe offers lower hourly cost.</p>
+    </section>
+
+    <footer class="footer">
+      <div>Note: Savings compare lowest public NeoCloud on-demand per-GPU rates (which may include PCIe or non-NVSwitch configurations) against standard 8× SXM Hyperscaler public list rates; verify interconnect, egress, and SLA terms directly with each provider.</div>
+      <div style="margin-top:6px;">Independent public cloud GPU rate index &amp; calculator. All provider and hardware trademarks belong to their respective owners; GPURentalRates.com is not endorsed by or affiliated with any listed cloud vendor. <span id="acq-footer-link" class="hidden-stage">· <a href="#acquire" onclick="openModal(true);return false;" style="color:var(--accent);font-weight:700;">Media / Partnership &amp; Asset Inquiry</a></span></div>
+    </footer>
+  </main>
+
+  <div id="acq-modal" class="modal-backdrop" onclick="if(event.target===this) openModal(false)">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <h3 style="margin:0;font-size:1.16rem;">💼 Acquire GPURentalRates.com (Turnkey Bundle)</h3>
+        <button class="btn" onclick="openModal(false)">✕ Close</button>
+      </div>
+      <p style="font-size:0.87rem;color:var(--text-muted);margin-top:0;">
+        Ideal inbound lead-generation &amp; SEO asset for GPU NeoClouds, AI infrastructure brokers, or affiliate media operators.
+      </p>
+      <ul style="font-size:0.85rem;padding-left:18px;line-height:1.65;">
+        <li><strong>Exact-Match Commercial Domain:</strong> <code>GPURentalRates.com</code> (Google Autocomplete #2 query match).</li>
+        <li><strong>Zero-Maintenance Architecture (<code>$0/mo</code> Hosting):</strong> 100% static HTML/JS + automated GitHub Actions cron syncing 190+ live GPU offers across 22 providers.</li>
+        <li><strong>Instant Handover:</strong> Registrar push / Auth-Code + full GitHub repository &amp; SEO schema bundle delivered within 24 hours via Escrow / Spaceship Buyer Protection.</li>
+      </ul>
+      <div style="padding:12px 14px;border-radius:10px;background:var(--surface-alt);border:1px solid var(--border);margin:14px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+        <div>
+          <div style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">Turnkey Buy-It-Now (Domain + Full App Code)</div>
+          <div style="font-size:1.35rem;font-weight:900;">$1,488 USD <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);">(or Make Offer)</span></div>
+        </div>
+        <button id="copy-inq-btn" class="btn btn-primary" onclick="copyInquiry()">📋 Copy Acquisition Inquiry Email</button>
+      </div>
+      <div id="copy-msg" style="font-size:0.8rem;font-weight:700;color:var(--accent);"></div>
+    </div>
+  </div>
+
+  <script>
+    // Consensus Launch Stage ("LAUNCH_CLEAN" for D1-D44 Show HN/Reddit, "FOOTER_SOFT" for D45-D60, "FULL_SALE" for D61+ or ?sale=1 preview)
+    const SALE_STAGE = new URLSearchParams(window.location.search).get("sale") === "1" ? "FULL_SALE" : "LAUNCH_CLEAN";
+    let DATA = { gpu_summaries: [], offers: [], summary: {} };
+
+    function applySaleStage() {
+      if (SALE_STAGE === "FULL_SALE") {
+        document.getElementById("acq-top-banner").classList.remove("hidden-stage");
+        document.getElementById("acq-nav-btn").classList.remove("hidden-stage");
+        document.getElementById("acq-footer-link").classList.remove("hidden-stage");
+      } else if (SALE_STAGE === "FOOTER_SOFT") {
+        document.getElementById("acq-footer-link").classList.remove("hidden-stage");
+      }
+    }
+
+    function applyTheme() {
+      const saved = localStorage.getItem("gpu_rates_theme") || "light";
+      const isDark = saved === "dark";
+      document.documentElement.classList.toggle("light-theme", !isDark);
+      document.body.classList.toggle("light-theme", !isDark);
+      const btn = document.getElementById("theme-btn");
+      if (btn) btn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+
+    function toggleTheme() {
+      const isLight = document.documentElement.classList.contains("light-theme");
+      localStorage.setItem("gpu_rates_theme", isLight ? "dark" : "light");
+      applyTheme();
+    }
+
+    function openModal(show) {
+      document.getElementById("acq-modal").classList.toggle("open", !!show);
+    }
+
+    function copyInquiry() {
+      const txt = "Subject: Acquisition Inquiry — GPURentalRates.com Turnkey Bundle\n\nHello,\nWe are interested in acquiring GPURentalRates.com (domain + live GPU pricing index codebase). Please share the escrow / checkout link.";
+      navigator.clipboard.writeText(txt);
+      document.getElementById("copy-msg").textContent = "✅ Inquiry template copied! Ready to send via Spaceship / Escrow.";
+    }
+
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+    }
+
+    function fmtUsd(n) {
+      return "$" + Number(n || 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    async function init() {
+      const basePath = window.location.pathname.replace(/\/$/, "");
+      const jsonUrl = basePath.includes("/starter/") ? `${basePath}/gpu_rates.json` : "./gpu_rates.json";
+      const r = await fetch(jsonUrl);
+      DATA = await r.json();
+      document.getElementById("updated-stamp").textContent = `Updated: ${DATA.updated_at_utc || "-"} (${(DATA.summary || {}).total_offers || 0} offers)`;
+
+      const sums = DATA.gpu_summaries || [];
+      const fltGpu = document.getElementById("flt-gpu");
+      const calcGpu = document.getElementById("calc-gpu");
+      sums.forEach(g => {
+        fltGpu.insertAdjacentHTML("beforeend", `<option value="${esc(g.gpu_key)}">${esc(g.gpu_label)} (${g.offers_count})</option>`);
+        calcGpu.insertAdjacentHTML("beforeend", `<option value="${esc(g.gpu_key)}" ${g.gpu_key==="H100"?"selected":""}>${esc(g.gpu_label)} — from $${g.lowest_per_gpu_usd.toFixed(2)}/h</option>`);
+      });
+
+      renderSummaryCards();
+      updateCalculator();
+      renderOffers();
+    }
+
+    function renderSummaryCards() {
+      const topKeys = ["B300", "B200", "H200", "H100", "A100_80G", "RTX5090", "RTX4090"];
+      const sums = (DATA.gpu_summaries || []).filter(g => topKeys.includes(g.gpu_key)).slice(0, 6);
+      const curFlt = document.getElementById("flt-gpu").value;
+      document.getElementById("gpu-summary-cards").innerHTML = sums.map(g => `
+        <div class="gcard ${curFlt === g.gpu_key ? 'active' : ''}" onclick="selectGpuCard('${esc(g.gpu_key)}')">
+          <div class="gcard-title">${esc(g.gpu_label)}</div>
+          <div class="gcard-price">$${Number(g.lowest_per_gpu_usd).toFixed(2)}<span style="font-size:0.78rem;font-weight:700;color:var(--text-muted);">/GPU/h</span></div>
+          <div class="gcard-sub">Median $${Number(g.median_per_gpu_usd).toFixed(2)} · <span class="badge b-save">Save ${g.max_savings_pct}%</span></div>
+        </div>
+      `).join("");
+    }
+
+    function selectGpuCard(gkey) {
+      const sel = document.getElementById("flt-gpu");
+      sel.value = sel.value === gkey ? "ALL" : gkey;
+      document.getElementById("calc-gpu").value = gkey;
+      renderSummaryCards();
+      updateCalculator();
+      renderOffers();
+    }
+
+    function applyPreset(gkey, count, hrs) {
+      const cg = document.getElementById("calc-gpu");
+      if ([...cg.options].some(o => o.value === gkey)) cg.value = gkey;
+      document.getElementById("calc-count").value = String(count);
+      document.getElementById("calc-hours").value = String(hrs);
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      const gkey = document.getElementById("calc-gpu").value;
+      const count = Math.max(1, parseInt(document.getElementById("calc-count").value || "8", 10));
+      const hrs = Math.max(1, parseFloat(document.getElementById("calc-hours").value || "72"));
+      const g = (DATA.gpu_summaries || []).find(x => x.gpu_key === gkey) || (DATA.gpu_summaries || [])[0];
+      if (!g) return;
+      const lowTot = g.lowest_per_gpu_usd * count * hrs;
+      const medTot = g.median_per_gpu_usd * count * hrs;
+      const refTot = g.reference_cloud_usd * count * hrs;
+      const saved = Math.max(0, refTot - lowTot);
+      const pct = refTot > 0 ? Math.round((saved / refTot) * 100) : 0;
+
+      document.getElementById("res-low").textContent = fmtUsd(lowTot);
+      document.getElementById("res-low-sub").textContent = `$${g.lowest_per_gpu_usd.toFixed(2)}/GPU/h × ${count} GPUs × ${hrs}h`;
+      document.getElementById("res-med").textContent = fmtUsd(medTot);
+      document.getElementById("res-med-sub").textContent = `$${g.median_per_gpu_usd.toFixed(2)}/GPU/h market median`;
+      document.getElementById("res-ref").textContent = fmtUsd(refTot);
+      document.getElementById("res-save").textContent = `${fmtUsd(saved)} (${pct}%)`;
+      document.getElementById("res-vram").textContent = `Total Cluster VRAM: ${(g.vram_gb * count).toLocaleString()} GB`;
+    }
+
+    function renderOffers() {
+      const fg = document.getElementById("flt-gpu").value;
+      const fn = document.getElementById("flt-num").value;
+      const fs = document.getElementById("flt-stock").checked;
+      const fq = (document.getElementById("flt-search").value || "").trim().toLowerCase();
+
+      let rows = (DATA.offers || []).filter(r => {
+        if (fg !== "ALL" && r.gpu_key !== fg) return false;
+        if (fn !== "ALL" && String(r.num_gpus) !== fn) return false;
+        if (fs && !r.in_stock) return false;
+        if (fq) {
+          const hay = `${r.provider_name} ${r.gpu_label} ${r.interconnect} ${(r.live_regions||[]).join(" ")}`.toLowerCase();
+          if (!hay.includes(fq)) return false;
+        }
+        return true;
+      });
+      document.getElementById("offer-count-lbl").textContent = `${rows.length} verified configurations`;
+      const tb = document.getElementById("offers-tbody");
+      if (!rows.length) {
+        tb.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:28px;">No configurations match your filter.</td></tr>`;
+        return;
+      }
+      tb.innerHTML = rows.slice(0, 120).map(r => {
+        const stockBadge = r.is_reference
+          ? `<span class="badge b-ref">Hyperscaler Reference</span>`
+          : (r.in_stock ? `<span class="badge b-stock">🟢 In Stock</span>` : `<span class="badge b-wait">Waitlist / Check</span>`);
+        const regs = (r.live_regions || []).join(" · ") || "Global";
+        return `
+          <tr>
+            <td>
+              <div style="font-weight:800;"><a href="${esc(r.provider_url)}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">${esc(r.provider_name)} ↗</a></div>
+              <div style="font-size:0.75rem;color:var(--text-muted);">${esc(r.tier)}</div>
+            </td>
+            <td>
+              <div style="font-weight:800;">${esc(r.gpu_label)}</div>
+              <div style="font-size:0.75rem;color:var(--text-muted);">${r.vram_gb} GB VRAM / GPU</div>
+            </td>
+            <td>
+              <div style="font-weight:700;">${r.num_gpus}× GPU (${r.num_gpus * r.vram_gb} GB total)</div>
+              <div style="font-size:0.75rem;color:var(--text-muted);">${esc(r.interconnect)} · ${r.vcpus || "-"} vCPU · ${r.ram_gb || "-"} GB RAM</div>
+            </td>
+            <td style="font-size:1.02rem;font-weight:900;">$${Number(r.price_per_gpu_hr_usd).toFixed(2)}<span style="font-size:0.74rem;font-weight:600;color:var(--text-muted);">/h</span></td>
+            <td style="font-weight:700;">$${Number(r.node_price_hr_usd).toFixed(2)}/h</td>
+            <td>
+              <div>${stockBadge}</div>
+              <div style="font-size:0.74rem;color:var(--text-muted);margin-top:3px;">${esc(regs)}</div>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    function exportCsv() {
+      const header = ["Provider","Tier","GPU","Num_GPUs","VRAM_Per_GPU_GB","Interconnect","USD_Per_GPU_Hr","Node_USD_Hr","In_Stock"];
+      const lines = [header.join(",")].concat((DATA.offers || []).map(r =>
+        [r.provider_name, r.tier, r.gpu_label, r.num_gpus, r.vram_gb, r.interconnect, r.price_per_gpu_hr_usd, r.node_price_hr_usd, r.in_stock]
+          .map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")
+      ));
+      const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8;" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "gpu_rental_rates_live.csv";
+      a.click();
+    }
+
+    applyTheme();
+    applySaleStage();
+    init();
+  </script>
+</body>
+</html>
