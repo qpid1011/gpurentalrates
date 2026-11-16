@@ -28,14 +28,16 @@ jobs:
         with:
           python-version: "3.11"
       - name: Fetch live multi-cloud GPU prices, stock & daily history snapshot
-        run: python3 scripts/sync_gpu_rates.py
-      - name: Commit updated gpu_rates.json and history archive
+        run: |
+          python3 scripts/sync_gpu_rates.py
+          python3 scripts/prerender_seo.py
+      - name: Commit updated gpu_rates.json, SSR index.html, sitemap & history archive
         run: |
           git config user.name "GPURentalRates Bot"
           git config user.email "bot@gpurentalrates.com"
-          git add public/gpu_rates.json public/history/
+          git add public/gpu_rates.json public/index.html public/sitemap.xml public/*.txt public/history/
           if ! git diff --staged --quiet; then
-            git commit -m "chore(rates): auto-sync live cloud GPU pricing & daily history [skip ci]"
+            git commit -m "chore(rates): auto-sync live cloud GPU pricing, SSR HTML & daily history [skip ci]"
             git pull --rebase -X ours origin main
             git push origin HEAD:main
           fi
@@ -48,3 +50,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Ping IndexNow after Pages deploy
+        run: python3 scripts/prerender_seo.py --ping-indexnow || true
