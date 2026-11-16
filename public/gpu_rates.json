@@ -1,13 +1,13 @@
 {
   "site": "GPURentalRates.com",
-  "updated_at_utc": "2026-11-16 06:46 UTC",
-  "updated_epoch": 1794811592,
+  "updated_at_utc": "2026-11-16 06:54 UTC",
+  "updated_epoch": 1794812089,
   "stale_warning": false,
   "summary": {
     "total_offers": 192,
     "providers_tracked": 22,
     "gpu_models_tracked": 13,
-    "in_stock_offers": 47
+    "in_stock_offers": 50
   },
   "gpu_summaries": [
     {
@@ -88,7 +88,7 @@
       "vram_gb": 80,
       "arch": "Ampere",
       "offers_count": 30,
-      "in_stock_count": 8,
+      "in_stock_count": 10,
       "lowest_per_gpu_usd": 1.35,
       "median_per_gpu_usd": 1.85,
       "reference_cloud_usd": 5.12,
@@ -160,7 +160,7 @@
       "vram_gb": 48,
       "arch": "Ampere",
       "offers_count": 25,
-      "in_stock_count": 9,
+      "in_stock_count": 10,
       "lowest_per_gpu_usd": 0.49,
       "median_per_gpu_usd": 0.58,
       "reference_cloud_usd": 1.37,
@@ -1505,9 +1505,8 @@
       "ram_gb": 240,
       "node_price_hr_usd": 3.3,
       "price_per_gpu_hr_usd": 3.3,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "FR, Paris",
         "PL, Warsaw"
       ],
       "is_reference": false
@@ -1655,9 +1654,10 @@
       "ram_gb": 200,
       "node_price_hr_usd": 4.29,
       "price_per_gpu_hr_usd": 4.29,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Salt Lake City, UT"
+        "IN, Mumbai",
+        "US, Chicago, IL"
       ],
       "is_reference": false
     },
@@ -1932,7 +1932,7 @@
       "ram_gb": 120,
       "node_price_hr_usd": 1.35,
       "price_per_gpu_hr_usd": 1.35,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "CA, Montreal"
       ],
@@ -2062,7 +2062,7 @@
       "ram_gb": 100,
       "node_price_hr_usd": 1.38,
       "price_per_gpu_hr_usd": 1.38,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA"
       ],
@@ -2701,7 +2701,6 @@
       "in_stock": true,
       "live_regions": [
         "US, Phoenix, AZ",
-        "IN, Mumbai",
         "US, Dulles, VA"
       ],
       "is_reference": false
@@ -2942,6 +2941,7 @@
       "price_per_gpu_hr_usd": 0.88,
       "in_stock": true,
       "live_regions": [
+        "US, Kansas City, KS",
         "US, Des Moines, IA"
       ],
       "is_reference": false
@@ -4100,7 +4100,7 @@
       "ram_gb": 60,
       "node_price_hr_usd": 1.08,
       "price_per_gpu_hr_usd": 1.08,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "FI, Central"
       ],

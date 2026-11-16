@@ -1,6 +1,6 @@
 {
   "date_utc": "2026-11-16",
-  "updated_at_utc": "2026-11-16 06:46 UTC",
+  "updated_at_utc": "2026-11-16 06:54 UTC",
   "gpu_summaries": [
     {
       "gpu_key": "B300",
@@ -80,7 +80,7 @@
       "vram_gb": 80,
       "arch": "Ampere",
       "offers_count": 30,
-      "in_stock_count": 8,
+      "in_stock_count": 10,
       "lowest_per_gpu_usd": 1.35,
       "median_per_gpu_usd": 1.85,
       "reference_cloud_usd": 5.12,
@@ -152,7 +152,7 @@
       "vram_gb": 48,
       "arch": "Ampere",
       "offers_count": 25,
-      "in_stock_count": 9,
+      "in_stock_count": 10,
       "lowest_per_gpu_usd": 0.49,
       "median_per_gpu_usd": 0.58,
       "reference_cloud_usd": 1.37,
