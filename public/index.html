@@ -6,6 +6,19 @@
   <title>GPU Rental Rates (2026 Live) — H100, H200, B200, B300 &amp; RTX 5090 Cloud Price Index</title>
   <meta name="description" content="Real-time hourly cloud GPU rental rates across 22 providers (Lambda, Nebius, Crusoe, Hyperstack, Voltage Park, AWS, GCP). Compare B300, B200, H200, H100, A100 &amp; RTX 5090 prices and calculate cluster training costs." />
   <link rel="canonical" href="https://gpurentalrates.com/" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNWP0EE6SS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VNWP0EE6SS', { anonymize_ip: true });
+    document.addEventListener('click', function(e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href^="http"]') : null;
+      if (a && a.hostname && a.hostname.indexOf('gpurentalrates.com') === -1) {
+        gtag('event', 'provider_outbound_click', { provider_domain: a.hostname, link_url: a.href });
+      }
+    });
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
