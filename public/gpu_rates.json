@@ -1,13 +1,13 @@
 {
   "site": "GPURentalRates.com",
-  "updated_at_utc": "2026-11-17 07:53 UTC",
-  "updated_epoch": 1794902025,
+  "updated_at_utc": "2026-11-17 20:53 UTC",
+  "updated_epoch": 1794948835,
   "stale_warning": false,
   "summary": {
     "total_offers": 190,
     "providers_tracked": 22,
     "gpu_models_tracked": 13,
-    "in_stock_offers": 50
+    "in_stock_offers": 38
   },
   "gpu_summaries": [
     {
@@ -16,10 +16,10 @@
       "vram_gb": 288,
       "arch": "Blackwell",
       "offers_count": 7,
-      "in_stock_count": 1,
-      "lowest_per_gpu_usd": 7.71,
-      "median_per_gpu_usd": 7.91,
-      "reference_cloud_usd": 21.59,
+      "in_stock_count": 0,
+      "lowest_per_gpu_usd": 8.5,
+      "median_per_gpu_usd": 12.87,
+      "reference_cloud_usd": 23.8,
       "max_savings_pct": 64
     },
     {
@@ -28,9 +28,9 @@
       "vram_gb": 192,
       "arch": "Blackwell",
       "offers_count": 11,
-      "in_stock_count": 0,
+      "in_stock_count": 1,
       "lowest_per_gpu_usd": 3.74,
-      "median_per_gpu_usd": 6.52,
+      "median_per_gpu_usd": 6.99,
       "reference_cloud_usd": 10.47,
       "max_savings_pct": 64
     },
@@ -54,7 +54,7 @@
       "offers_count": 14,
       "in_stock_count": 1,
       "lowest_per_gpu_usd": 3.0,
-      "median_per_gpu_usd": 4.47,
+      "median_per_gpu_usd": 4.52,
       "reference_cloud_usd": 8.6,
       "max_savings_pct": 65
     },
@@ -64,7 +64,7 @@
       "vram_gb": 80,
       "arch": "Hopper",
       "offers_count": 39,
-      "in_stock_count": 9,
+      "in_stock_count": 2,
       "lowest_per_gpu_usd": 1.66,
       "median_per_gpu_usd": 2.73,
       "reference_cloud_usd": 8.8,
@@ -88,7 +88,7 @@
       "vram_gb": 80,
       "arch": "Ampere",
       "offers_count": 30,
-      "in_stock_count": 13,
+      "in_stock_count": 12,
       "lowest_per_gpu_usd": 1.35,
       "median_per_gpu_usd": 1.85,
       "reference_cloud_usd": 5.12,
@@ -112,7 +112,7 @@
       "vram_gb": 48,
       "arch": "Ada",
       "offers_count": 19,
-      "in_stock_count": 4,
+      "in_stock_count": 3,
       "lowest_per_gpu_usd": 0.69,
       "median_per_gpu_usd": 1.5,
       "reference_cloud_usd": 1.93,
@@ -148,7 +148,7 @@
       "vram_gb": 48,
       "arch": "Ada",
       "offers_count": 9,
-      "in_stock_count": 5,
+      "in_stock_count": 3,
       "lowest_per_gpu_usd": 0.6,
       "median_per_gpu_usd": 0.97,
       "reference_cloud_usd": 1.68,
@@ -160,7 +160,7 @@
       "vram_gb": 48,
       "arch": "Ampere",
       "offers_count": 25,
-      "in_stock_count": 9,
+      "in_stock_count": 8,
       "lowest_per_gpu_usd": 0.49,
       "median_per_gpu_usd": 0.58,
       "reference_cloud_usd": 1.37,
@@ -168,90 +168,6 @@
     }
   ],
   "offers": [
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "8B300.240V",
-      "gpu_key": "B300",
-      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
-      "vram_gb": 288,
-      "num_gpus": 8,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 240,
-      "ram_gb": 2040,
-      "node_price_hr_usd": 61.64,
-      "price_per_gpu_hr_usd": 7.71,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "4B300.120V",
-      "gpu_key": "B300",
-      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
-      "vram_gb": 288,
-      "num_gpus": 4,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 120,
-      "ram_gb": 1020,
-      "node_price_hr_usd": 31.23,
-      "price_per_gpu_hr_usd": 7.81,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "1B300.30V",
-      "gpu_key": "B300",
-      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
-      "vram_gb": 288,
-      "num_gpus": 1,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 30,
-      "ram_gb": 255,
-      "node_price_hr_usd": 7.91,
-      "price_per_gpu_hr_usd": 7.91,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "2B300.60V",
-      "gpu_key": "B300",
-      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
-      "vram_gb": 288,
-      "num_gpus": 2,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 60,
-      "ram_gb": 510,
-      "node_price_hr_usd": 15.82,
-      "price_per_gpu_hr_usd": 7.91,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
     {
       "provider_id": "excesssupply",
       "provider_name": "ExcessSupply",
@@ -309,9 +225,94 @@
       "ram_gb": 2768,
       "node_price_hr_usd": 88.0,
       "price_per_gpu_hr_usd": 11.0,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "FR, Paris"
+        "FR, Paris",
+        "US, Woodbury, MN"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "8B300.240V",
+      "gpu_key": "B300",
+      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
+      "vram_gb": 288,
+      "num_gpus": 8,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 240,
+      "ram_gb": 2040,
+      "node_price_hr_usd": 102.93,
+      "price_per_gpu_hr_usd": 12.87,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "4B300.120V",
+      "gpu_key": "B300",
+      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
+      "vram_gb": 288,
+      "num_gpus": 4,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 120,
+      "ram_gb": 1020,
+      "node_price_hr_usd": 51.88,
+      "price_per_gpu_hr_usd": 12.97,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "2B300.60V",
+      "gpu_key": "B300",
+      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
+      "vram_gb": 288,
+      "num_gpus": 2,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 60,
+      "ram_gb": 510,
+      "node_price_hr_usd": 26.15,
+      "price_per_gpu_hr_usd": 13.07,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "1B300.30V",
+      "gpu_key": "B300",
+      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
+      "vram_gb": 288,
+      "num_gpus": 1,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 30,
+      "ram_gb": 255,
+      "node_price_hr_usd": 13.08,
+      "price_per_gpu_hr_usd": 13.08,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
       ],
       "is_reference": false
     },
@@ -355,90 +356,6 @@
       "in_stock": false,
       "live_regions": [
         "US, Kansas City, MO"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "8B200.240V",
-      "gpu_key": "B200",
-      "gpu_label": "NVIDIA B200",
-      "vram_gb": 192,
-      "num_gpus": 8,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 248,
-      "ram_gb": 1360,
-      "node_price_hr_usd": 50.44,
-      "price_per_gpu_hr_usd": 6.3,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "4B200.120V",
-      "gpu_key": "B200",
-      "gpu_label": "NVIDIA B200",
-      "vram_gb": 192,
-      "num_gpus": 4,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 124,
-      "ram_gb": 680,
-      "node_price_hr_usd": 25.67,
-      "price_per_gpu_hr_usd": 6.42,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "1B200.30V",
-      "gpu_key": "B200",
-      "gpu_label": "NVIDIA B200",
-      "vram_gb": 192,
-      "num_gpus": 1,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 31,
-      "ram_gb": 170,
-      "node_price_hr_usd": 6.52,
-      "price_per_gpu_hr_usd": 6.52,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "2B200.60V",
-      "gpu_key": "B200",
-      "gpu_label": "NVIDIA B200",
-      "vram_gb": 192,
-      "num_gpus": 2,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 62,
-      "ram_gb": 340,
-      "node_price_hr_usd": 13.04,
-      "price_per_gpu_hr_usd": 6.52,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
       ],
       "is_reference": false
     },
@@ -545,9 +462,93 @@
       "ram_gb": 1792,
       "node_price_hr_usd": 76.0,
       "price_per_gpu_hr_usd": 9.5,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "US, Kansas City, MO"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "8B200.240V",
+      "gpu_key": "B200",
+      "gpu_label": "NVIDIA B200",
+      "vram_gb": 192,
+      "num_gpus": 8,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 248,
+      "ram_gb": 1360,
+      "node_price_hr_usd": 79.25,
+      "price_per_gpu_hr_usd": 9.91,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "4B200.120V",
+      "gpu_key": "B200",
+      "gpu_label": "NVIDIA B200",
+      "vram_gb": 192,
+      "num_gpus": 4,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 124,
+      "ram_gb": 680,
+      "node_price_hr_usd": 40.04,
+      "price_per_gpu_hr_usd": 10.01,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "1B200.30V",
+      "gpu_key": "B200",
+      "gpu_label": "NVIDIA B200",
+      "vram_gb": 192,
+      "num_gpus": 1,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 31,
+      "ram_gb": 170,
+      "node_price_hr_usd": 10.12,
+      "price_per_gpu_hr_usd": 10.12,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "2B200.60V",
+      "gpu_key": "B200",
+      "gpu_label": "NVIDIA B200",
+      "vram_gb": 192,
+      "num_gpus": 2,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 62,
+      "ram_gb": 340,
+      "node_price_hr_usd": 20.23,
+      "price_per_gpu_hr_usd": 10.12,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
       ],
       "is_reference": false
     },
@@ -636,48 +637,6 @@
       "is_reference": false
     },
     {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "4H200.141S.176V",
-      "gpu_key": "H200",
-      "gpu_label": "NVIDIA H200 SXM",
-      "vram_gb": 141,
-      "num_gpus": 4,
-      "interconnect": "SXM5 + NVLink",
-      "vcpus": 176,
-      "ram_gb": 740,
-      "node_price_hr_usd": 16.82,
-      "price_per_gpu_hr_usd": 4.21,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "8H200.141S.176V",
-      "gpu_key": "H200",
-      "gpu_label": "NVIDIA H200 SXM",
-      "vram_gb": 141,
-      "num_gpus": 8,
-      "interconnect": "SXM5 + NVLink",
-      "vcpus": 176,
-      "ram_gb": 1450,
-      "node_price_hr_usd": 33.64,
-      "price_per_gpu_hr_usd": 4.21,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
       "provider_id": "boostrun",
       "provider_name": "BoostRun",
       "provider_url": "https://boostrun.com",
@@ -718,27 +677,6 @@
       "live_regions": [
         "US, Raleigh, NC",
         "US, Dallas, TX"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "1H200.141S.44V",
-      "gpu_key": "H200",
-      "gpu_label": "NVIDIA H200 SXM",
-      "vram_gb": 141,
-      "num_gpus": 1,
-      "interconnect": "SXM5",
-      "vcpus": 44,
-      "ram_gb": 185,
-      "node_price_hr_usd": 4.41,
-      "price_per_gpu_hr_usd": 4.41,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
       ],
       "is_reference": false
     },
@@ -831,27 +769,6 @@
       "is_reference": false
     },
     {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "2H200.141S.88V",
-      "gpu_key": "H200",
-      "gpu_label": "NVIDIA H200 SXM",
-      "vram_gb": 141,
-      "num_gpus": 2,
-      "interconnect": "SXM5 + NVLink",
-      "vcpus": 88,
-      "ram_gb": 370,
-      "node_price_hr_usd": 9.23,
-      "price_per_gpu_hr_usd": 4.62,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
       "provider_id": "excesssupply",
       "provider_name": "ExcessSupply",
       "provider_url": "https://shadeform.ai",
@@ -891,6 +808,90 @@
       "in_stock": true,
       "live_regions": [
         "FI, Helsinki"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "4H200.141S.176V",
+      "gpu_key": "H200",
+      "gpu_label": "NVIDIA H200 SXM",
+      "vram_gb": 141,
+      "num_gpus": 4,
+      "interconnect": "SXM5 + NVLink",
+      "vcpus": 176,
+      "ram_gb": 740,
+      "node_price_hr_usd": 28.18,
+      "price_per_gpu_hr_usd": 7.04,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "8H200.141S.176V",
+      "gpu_key": "H200",
+      "gpu_label": "NVIDIA H200 SXM",
+      "vram_gb": 141,
+      "num_gpus": 8,
+      "interconnect": "SXM5 + NVLink",
+      "vcpus": 176,
+      "ram_gb": 1450,
+      "node_price_hr_usd": 56.34,
+      "price_per_gpu_hr_usd": 7.04,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "1H200.141S.44V",
+      "gpu_key": "H200",
+      "gpu_label": "NVIDIA H200 SXM",
+      "vram_gb": 141,
+      "num_gpus": 1,
+      "interconnect": "SXM5",
+      "vcpus": 44,
+      "ram_gb": 185,
+      "node_price_hr_usd": 7.26,
+      "price_per_gpu_hr_usd": 7.26,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "2H200.141S.88V",
+      "gpu_key": "H200",
+      "gpu_label": "NVIDIA H200 SXM",
+      "vram_gb": 141,
+      "num_gpus": 2,
+      "interconnect": "SXM5 + NVLink",
+      "vcpus": 88,
+      "ram_gb": 370,
+      "node_price_hr_usd": 14.91,
+      "price_per_gpu_hr_usd": 7.46,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
       ],
       "is_reference": false
     },
@@ -1267,7 +1268,7 @@
       "ram_gb": 180,
       "node_price_hr_usd": 2.5,
       "price_per_gpu_hr_usd": 2.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "CA, Montreal"
       ],
@@ -1374,9 +1375,10 @@
       "ram_gb": 256,
       "node_price_hr_usd": 5.46,
       "price_per_gpu_hr_usd": 2.73,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Des Moines, IA"
+        "US, Des Moines, IA",
+        "US, Kansas City, KS"
       ],
       "is_reference": false
     },
@@ -1395,9 +1397,10 @@
       "ram_gb": 128,
       "node_price_hr_usd": 2.73,
       "price_per_gpu_hr_usd": 2.73,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Des Moines, IA"
+        "US, Des Moines, IA",
+        "US, Kansas City, KS"
       ],
       "is_reference": false
     },
@@ -1504,31 +1507,9 @@
       "ram_gb": 240,
       "node_price_hr_usd": 3.3,
       "price_per_gpu_hr_usd": 3.3,
-      "in_stock": false,
-      "live_regions": [
-        "PL, Warsaw",
-        "FR, Paris"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "1H100.80S.30V",
-      "gpu_key": "H100",
-      "gpu_label": "NVIDIA H100 80GB",
-      "vram_gb": 80,
-      "num_gpus": 1,
-      "interconnect": "SXM5",
-      "vcpus": 30,
-      "ram_gb": 120,
-      "node_price_hr_usd": 3.31,
-      "price_per_gpu_hr_usd": 3.31,
       "in_stock": true,
       "live_regions": [
-        "FI, Central"
+        "FR, Paris"
       ],
       "is_reference": false
     },
@@ -1611,9 +1592,10 @@
       "ram_gb": 900,
       "node_price_hr_usd": 16.36,
       "price_per_gpu_hr_usd": 4.09,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Atlanta, GA"
+        "US, Dallas, TX",
+        "US, Austin, TX"
       ],
       "is_reference": false
     },
@@ -1632,8 +1614,9 @@
       "ram_gb": 450,
       "node_price_hr_usd": 8.38,
       "price_per_gpu_hr_usd": 4.19,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
+        "US, Atlanta, GA",
         "US, Austin, TX"
       ],
       "is_reference": false
@@ -1653,9 +1636,10 @@
       "ram_gb": 200,
       "node_price_hr_usd": 4.29,
       "price_per_gpu_hr_usd": 4.29,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Salt Lake City, UT"
+        "IN, Mumbai",
+        "US, Chicago, IL"
       ],
       "is_reference": false
     },
@@ -1674,10 +1658,9 @@
       "ram_gb": 225,
       "node_price_hr_usd": 4.36,
       "price_per_gpu_hr_usd": 4.36,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Dallas, TX",
-        "US, Austin, TX",
         "US, Atlanta, GA"
       ],
       "is_reference": false
@@ -1723,6 +1706,27 @@
       "live_regions": [
         "US, New York, NY",
         "CA, Toronto"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "1H100.80S.30V",
+      "gpu_key": "H100",
+      "gpu_label": "NVIDIA H100 80GB",
+      "vram_gb": 80,
+      "num_gpus": 1,
+      "interconnect": "SXM5",
+      "vcpus": 30,
+      "ram_gb": 120,
+      "node_price_hr_usd": 5.42,
+      "price_per_gpu_hr_usd": 5.42,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
       ],
       "is_reference": false
     },
@@ -2017,9 +2021,10 @@
       "ram_gb": 64,
       "node_price_hr_usd": 1.35,
       "price_per_gpu_hr_usd": 1.35,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Des Moines, IA"
+        "US, Wichita, KS",
+        "US, Kansas City, KS"
       ],
       "is_reference": false
     },
@@ -2081,7 +2086,7 @@
       "ram_gb": 1500,
       "node_price_hr_usd": 11.04,
       "price_per_gpu_hr_usd": 1.38,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA"
       ],
@@ -2312,9 +2317,8 @@
       "ram_gb": 960,
       "node_price_hr_usd": 16.0,
       "price_per_gpu_hr_usd": 2.0,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "US, Sparks, NV",
         "US, Culpeper, VA"
       ],
       "is_reference": false
@@ -2699,6 +2703,7 @@
       "in_stock": true,
       "live_regions": [
         "US, Phoenix, AZ",
+        "IN, Mumbai",
         "US, Dulles, VA"
       ],
       "is_reference": false
@@ -2743,8 +2748,7 @@
       "in_stock": true,
       "live_regions": [
         "US, San Jose, Ca",
-        "US, Dulles, VA",
-        "DE, Frankfurt"
+        "JP, Tokyo"
       ],
       "is_reference": false
     },
@@ -2938,10 +2942,10 @@
       "ram_gb": 72,
       "node_price_hr_usd": 0.88,
       "price_per_gpu_hr_usd": 0.88,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Kansas City, KS",
-        "US, Des Moines, IA"
+        "US, Des Moines, IA",
+        "US, Kansas City, KS"
       ],
       "is_reference": false
     },
@@ -2962,8 +2966,8 @@
       "price_per_gpu_hr_usd": 0.88,
       "in_stock": false,
       "live_regions": [
-        "US, Kansas City, MO",
-        "US, Des Moines, IA"
+        "US, Kansas City, KS",
+        "US, Kansas City, MO"
       ],
       "is_reference": false
     },
@@ -3004,51 +3008,10 @@
       "ram_gb": 256,
       "node_price_hr_usd": 1.76,
       "price_per_gpu_hr_usd": 0.88,
-      "in_stock": true,
-      "live_regions": [
-        "US, Kansas City, KS"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "1L40S.20V",
-      "gpu_key": "L40S",
-      "gpu_label": "NVIDIA L40S 48GB",
-      "vram_gb": 48,
-      "num_gpus": 1,
-      "interconnect": "PCIE",
-      "vcpus": 20,
-      "ram_gb": 60,
-      "node_price_hr_usd": 1.43,
-      "price_per_gpu_hr_usd": 1.43,
       "in_stock": false,
       "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "8L40S.160V",
-      "gpu_key": "L40S",
-      "gpu_label": "NVIDIA L40S 48GB",
-      "vram_gb": 48,
-      "num_gpus": 8,
-      "interconnect": "PCIE",
-      "vcpus": 160,
-      "ram_gb": 480,
-      "node_price_hr_usd": 11.5,
-      "price_per_gpu_hr_usd": 1.44,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
+        "US, Kansas City, MO",
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -3091,8 +3054,8 @@
       "price_per_gpu_hr_usd": 1.5,
       "in_stock": false,
       "live_regions": [
-        "US, Culpeper, VA",
-        "US, Houston, TX"
+        "US, Houston, TX",
+        "US, Culpeper, VA"
       ],
       "is_reference": false
     },
@@ -3113,7 +3076,8 @@
       "price_per_gpu_hr_usd": 1.5,
       "in_stock": true,
       "live_regions": [
-        "US, Houston, TX"
+        "US, Houston, TX",
+        "US, Culpeper, VA"
       ],
       "is_reference": false
     },
@@ -3132,7 +3096,7 @@
       "ram_gb": 1176,
       "node_price_hr_usd": 12.0,
       "price_per_gpu_hr_usd": 1.5,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "US, Houston, TX",
         "US, Culpeper, VA"
@@ -3156,7 +3120,8 @@
       "price_per_gpu_hr_usd": 1.5,
       "in_stock": true,
       "live_regions": [
-        "US, Houston, TX"
+        "US, Houston, TX",
+        "US, Culpeper, VA"
       ],
       "is_reference": false
     },
@@ -3266,6 +3231,48 @@
       "live_regions": [
         "PL, Warsaw",
         "FR, Paris"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "8L40S.160V",
+      "gpu_key": "L40S",
+      "gpu_label": "NVIDIA L40S 48GB",
+      "vram_gb": 48,
+      "num_gpus": 8,
+      "interconnect": "PCIE",
+      "vcpus": 160,
+      "ram_gb": 480,
+      "node_price_hr_usd": 17.02,
+      "price_per_gpu_hr_usd": 2.13,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "1L40S.20V",
+      "gpu_key": "L40S",
+      "gpu_label": "NVIDIA L40S 48GB",
+      "vram_gb": 48,
+      "num_gpus": 1,
+      "interconnect": "PCIE",
+      "vcpus": 20,
+      "ram_gb": 60,
+      "node_price_hr_usd": 2.14,
+      "price_per_gpu_hr_usd": 2.14,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
       ],
       "is_reference": false
     },
@@ -3582,8 +3589,8 @@
       "price_per_gpu_hr_usd": 0.97,
       "in_stock": true,
       "live_regions": [
-        "US, Kansas City, KS",
-        "US, Des Moines, IA"
+        "US, Des Moines, IA",
+        "US, Kansas City, KS"
       ],
       "is_reference": false
     },
@@ -3602,72 +3609,10 @@
       "ram_gb": 640,
       "node_price_hr_usd": 7.76,
       "price_per_gpu_hr_usd": 0.97,
-      "in_stock": true,
-      "live_regions": [
-        "US, Kansas City, KS"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "1RTX6000ADA.10V",
-      "gpu_key": "RTX6000Ada",
-      "gpu_label": "NVIDIA RTX 6000 Ada 48GB",
-      "vram_gb": 48,
-      "num_gpus": 1,
-      "interconnect": "PCIE",
-      "vcpus": 10,
-      "ram_gb": 60,
-      "node_price_hr_usd": 1.1,
-      "price_per_gpu_hr_usd": 1.1,
-      "in_stock": true,
-      "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "2RTX6000ADA.20V",
-      "gpu_key": "RTX6000Ada",
-      "gpu_label": "NVIDIA RTX 6000 Ada 48GB",
-      "vram_gb": 48,
-      "num_gpus": 2,
-      "interconnect": "PCIE",
-      "vcpus": 20,
-      "ram_gb": 120,
-      "node_price_hr_usd": 2.21,
-      "price_per_gpu_hr_usd": 1.1,
       "in_stock": false,
       "live_regions": [
-        "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "verda",
-      "provider_name": "Verda (DataCrunch)",
-      "provider_url": "https://datacrunch.io",
-      "tier": "NeoCloud",
-      "instance_name": "8RTX6000ADA.80V",
-      "gpu_key": "RTX6000Ada",
-      "gpu_label": "NVIDIA RTX 6000 Ada 48GB",
-      "vram_gb": 48,
-      "num_gpus": 8,
-      "interconnect": "PCIE",
-      "vcpus": 80,
-      "ram_gb": 480,
-      "node_price_hr_usd": 8.86,
-      "price_per_gpu_hr_usd": 1.11,
-      "in_stock": false,
-      "live_regions": [
-        "FI, Central"
+        "US, Kansas City, MO",
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -3689,6 +3634,69 @@
       "in_stock": false,
       "live_regions": [
         "CA, Toronto"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "1RTX6000ADA.10V",
+      "gpu_key": "RTX6000Ada",
+      "gpu_label": "NVIDIA RTX 6000 Ada 48GB",
+      "vram_gb": 48,
+      "num_gpus": 1,
+      "interconnect": "PCIE",
+      "vcpus": 10,
+      "ram_gb": 60,
+      "node_price_hr_usd": 1.78,
+      "price_per_gpu_hr_usd": 1.78,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "2RTX6000ADA.20V",
+      "gpu_key": "RTX6000Ada",
+      "gpu_label": "NVIDIA RTX 6000 Ada 48GB",
+      "vram_gb": 48,
+      "num_gpus": 2,
+      "interconnect": "PCIE",
+      "vcpus": 20,
+      "ram_gb": 120,
+      "node_price_hr_usd": 3.56,
+      "price_per_gpu_hr_usd": 1.78,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "verda",
+      "provider_name": "Verda (DataCrunch)",
+      "provider_url": "https://datacrunch.io",
+      "tier": "NeoCloud",
+      "instance_name": "8RTX6000ADA.80V",
+      "gpu_key": "RTX6000Ada",
+      "gpu_label": "NVIDIA RTX 6000 Ada 48GB",
+      "vram_gb": 48,
+      "num_gpus": 8,
+      "interconnect": "PCIE",
+      "vcpus": 80,
+      "ram_gb": 480,
+      "node_price_hr_usd": 14.21,
+      "price_per_gpu_hr_usd": 1.78,
+      "in_stock": false,
+      "live_regions": [
+        "FI, Central"
       ],
       "is_reference": false
     },
@@ -3906,7 +3914,8 @@
       "price_per_gpu_hr_usd": 0.57,
       "in_stock": true,
       "live_regions": [
-        "US, Des Moines, IA"
+        "US, Des Moines, IA",
+        "US, Wichita, KS"
       ],
       "is_reference": false
     },
@@ -4163,9 +4172,10 @@
       "ram_gb": 100,
       "node_price_hr_usd": 1.09,
       "price_per_gpu_hr_usd": 1.09,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Dallas, TX"
+        "IN, Mumbai",
+        "US, Chicago, IL"
       ],
       "is_reference": false
     },
