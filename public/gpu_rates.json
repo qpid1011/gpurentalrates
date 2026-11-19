@@ -1,13 +1,13 @@
 {
   "site": "GPURentalRates.com",
-  "updated_at_utc": "2026-11-19 14:08 UTC",
-  "updated_epoch": 1795097339,
+  "updated_at_utc": "2026-11-19 14:10 UTC",
+  "updated_epoch": 1795097416,
   "stale_warning": false,
   "summary": {
     "total_offers": 190,
     "providers_tracked": 22,
     "gpu_models_tracked": 13,
-    "in_stock_offers": 37
+    "in_stock_offers": 38
   },
   "gpu_summaries": [
     {
@@ -64,7 +64,7 @@
       "vram_gb": 80,
       "arch": "Hopper",
       "offers_count": 39,
-      "in_stock_count": 3,
+      "in_stock_count": 4,
       "lowest_per_gpu_usd": 1.66,
       "median_per_gpu_usd": 2.73,
       "reference_cloud_usd": 8.8,
@@ -1312,7 +1312,7 @@
       "ram_gb": 360,
       "node_price_hr_usd": 5.0,
       "price_per_gpu_hr_usd": 2.5,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "CA, Montreal"
       ],
@@ -3570,7 +3570,6 @@
       "price_per_gpu_hr_usd": 0.97,
       "in_stock": true,
       "live_regions": [
-        "US, Kansas City, KS",
         "US, Des Moines, IA"
       ],
       "is_reference": false
@@ -3592,8 +3591,7 @@
       "price_per_gpu_hr_usd": 0.97,
       "in_stock": true,
       "live_regions": [
-        "US, Des Moines, IA",
-        "US, Kansas City, KS"
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },

@@ -1,6 +1,6 @@
 {
   "date_utc": "2026-11-19",
-  "updated_at_utc": "2026-11-19 14:08 UTC",
+  "updated_at_utc": "2026-11-19 14:10 UTC",
   "gpu_summaries": [
     {
       "gpu_key": "B300",
@@ -56,7 +56,7 @@
       "vram_gb": 80,
       "arch": "Hopper",
       "offers_count": 39,
-      "in_stock_count": 3,
+      "in_stock_count": 4,
       "lowest_per_gpu_usd": 1.66,
       "median_per_gpu_usd": 2.73,
       "reference_cloud_usd": 8.8,
