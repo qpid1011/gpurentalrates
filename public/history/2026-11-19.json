@@ -1,0 +1,162 @@
+{
+  "date_utc": "2026-11-19",
+  "updated_at_utc": "2026-11-19 07:22 UTC",
+  "gpu_summaries": [
+    {
+      "gpu_key": "B300",
+      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
+      "vram_gb": 288,
+      "arch": "Blackwell",
+      "offers_count": 8,
+      "in_stock_count": 1,
+      "lowest_per_gpu_usd": 8.5,
+      "median_per_gpu_usd": 12.87,
+      "reference_cloud_usd": 23.8,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "B200",
+      "gpu_label": "NVIDIA B200",
+      "vram_gb": 192,
+      "arch": "Blackwell",
+      "offers_count": 11,
+      "in_stock_count": 1,
+      "lowest_per_gpu_usd": 3.74,
+      "median_per_gpu_usd": 6.99,
+      "reference_cloud_usd": 10.47,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "GH200",
+      "gpu_label": "NVIDIA GH200 Grace Hopper",
+      "vram_gb": 96,
+      "arch": "Hopper",
+      "offers_count": 2,
+      "in_stock_count": 0,
+      "lowest_per_gpu_usd": 2.29,
+      "median_per_gpu_usd": 4.23,
+      "reference_cloud_usd": 6.41,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "H200",
+      "gpu_label": "NVIDIA H200 SXM",
+      "vram_gb": 141,
+      "arch": "Hopper",
+      "offers_count": 14,
+      "in_stock_count": 0,
+      "lowest_per_gpu_usd": 3.0,
+      "median_per_gpu_usd": 4.52,
+      "reference_cloud_usd": 8.6,
+      "max_savings_pct": 65
+    },
+    {
+      "gpu_key": "H100",
+      "gpu_label": "NVIDIA H100 80GB",
+      "vram_gb": 80,
+      "arch": "Hopper",
+      "offers_count": 39,
+      "in_stock_count": 4,
+      "lowest_per_gpu_usd": 1.66,
+      "median_per_gpu_usd": 2.73,
+      "reference_cloud_usd": 8.8,
+      "max_savings_pct": 81
+    },
+    {
+      "gpu_key": "H100_nvl",
+      "gpu_label": "NVIDIA H100 NVL",
+      "vram_gb": 94,
+      "arch": "Hopper",
+      "offers_count": 3,
+      "in_stock_count": 0,
+      "lowest_per_gpu_usd": 3.16,
+      "median_per_gpu_usd": 3.16,
+      "reference_cloud_usd": 8.85,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "A100_80G",
+      "gpu_label": "NVIDIA A100 80GB",
+      "vram_gb": 80,
+      "arch": "Ampere",
+      "offers_count": 30,
+      "in_stock_count": 17,
+      "lowest_per_gpu_usd": 1.35,
+      "median_per_gpu_usd": 1.85,
+      "reference_cloud_usd": 5.12,
+      "max_savings_pct": 74
+    },
+    {
+      "gpu_key": "A100",
+      "gpu_label": "NVIDIA A100 40GB",
+      "vram_gb": 40,
+      "arch": "Ampere",
+      "offers_count": 16,
+      "in_stock_count": 4,
+      "lowest_per_gpu_usd": 1.36,
+      "median_per_gpu_usd": 1.99,
+      "reference_cloud_usd": 3.81,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "L40S",
+      "gpu_label": "NVIDIA L40S 48GB",
+      "vram_gb": 48,
+      "arch": "Ada",
+      "offers_count": 19,
+      "in_stock_count": 7,
+      "lowest_per_gpu_usd": 0.69,
+      "median_per_gpu_usd": 1.5,
+      "reference_cloud_usd": 1.93,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "RTX5090",
+      "gpu_label": "NVIDIA RTX 5090 32GB",
+      "vram_gb": 32,
+      "arch": "Blackwell",
+      "offers_count": 3,
+      "in_stock_count": 0,
+      "lowest_per_gpu_usd": 0.65,
+      "median_per_gpu_usd": 0.7,
+      "reference_cloud_usd": 1.82,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "RTX4090",
+      "gpu_label": "NVIDIA RTX 4090 24GB",
+      "vram_gb": 24,
+      "arch": "Ada",
+      "offers_count": 7,
+      "in_stock_count": 1,
+      "lowest_per_gpu_usd": 0.4,
+      "median_per_gpu_usd": 0.6,
+      "reference_cloud_usd": 1.12,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "RTX6000Ada",
+      "gpu_label": "NVIDIA RTX 6000 Ada 48GB",
+      "vram_gb": 48,
+      "arch": "Ada",
+      "offers_count": 9,
+      "in_stock_count": 3,
+      "lowest_per_gpu_usd": 0.6,
+      "median_per_gpu_usd": 0.97,
+      "reference_cloud_usd": 1.68,
+      "max_savings_pct": 64
+    },
+    {
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "arch": "Ampere",
+      "offers_count": 25,
+      "in_stock_count": 7,
+      "lowest_per_gpu_usd": 0.49,
+      "median_per_gpu_usd": 0.58,
+      "reference_cloud_usd": 1.37,
+      "max_savings_pct": 64
+    }
+  ]
+}
