@@ -1,13 +1,13 @@
 {
   "site": "GPURentalRates.com",
-  "updated_at_utc": "2026-11-24 14:38 UTC",
-  "updated_epoch": 1795531085,
+  "updated_at_utc": "2026-11-24 15:39 UTC",
+  "updated_epoch": 1795534740,
   "stale_warning": false,
   "summary": {
     "total_offers": 190,
     "providers_tracked": 22,
     "gpu_models_tracked": 13,
-    "in_stock_offers": 39
+    "in_stock_offers": 38
   },
   "gpu_summaries": [
     {
@@ -28,7 +28,7 @@
       "vram_gb": 192,
       "arch": "Blackwell",
       "offers_count": 10,
-      "in_stock_count": 0,
+      "in_stock_count": 1,
       "lowest_per_gpu_usd": 3.74,
       "median_per_gpu_usd": 6.99,
       "reference_cloud_usd": 10.47,
@@ -52,7 +52,7 @@
       "vram_gb": 141,
       "arch": "Hopper",
       "offers_count": 14,
-      "in_stock_count": 4,
+      "in_stock_count": 2,
       "lowest_per_gpu_usd": 3.0,
       "median_per_gpu_usd": 4.52,
       "reference_cloud_usd": 8.6,
@@ -64,7 +64,7 @@
       "vram_gb": 80,
       "arch": "Hopper",
       "offers_count": 39,
-      "in_stock_count": 5,
+      "in_stock_count": 2,
       "lowest_per_gpu_usd": 1.66,
       "median_per_gpu_usd": 2.73,
       "reference_cloud_usd": 8.8,
@@ -88,7 +88,7 @@
       "vram_gb": 80,
       "arch": "Ampere",
       "offers_count": 30,
-      "in_stock_count": 10,
+      "in_stock_count": 13,
       "lowest_per_gpu_usd": 1.35,
       "median_per_gpu_usd": 1.85,
       "reference_cloud_usd": 5.12,
@@ -112,7 +112,7 @@
       "vram_gb": 48,
       "arch": "Ada",
       "offers_count": 19,
-      "in_stock_count": 4,
+      "in_stock_count": 3,
       "lowest_per_gpu_usd": 0.69,
       "median_per_gpu_usd": 1.5,
       "reference_cloud_usd": 1.93,
@@ -148,7 +148,7 @@
       "vram_gb": 48,
       "arch": "Ada",
       "offers_count": 9,
-      "in_stock_count": 0,
+      "in_stock_count": 2,
       "lowest_per_gpu_usd": 0.6,
       "median_per_gpu_usd": 0.97,
       "reference_cloud_usd": 1.68,
@@ -160,7 +160,7 @@
       "vram_gb": 48,
       "arch": "Ampere",
       "offers_count": 25,
-      "in_stock_count": 9,
+      "in_stock_count": 8,
       "lowest_per_gpu_usd": 0.49,
       "median_per_gpu_usd": 0.58,
       "reference_cloud_usd": 1.37,
@@ -482,7 +482,7 @@
       "ram_gb": 170,
       "node_price_hr_usd": 10.12,
       "price_per_gpu_hr_usd": 10.12,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "FI, Central"
       ],
@@ -718,9 +718,10 @@
       "ram_gb": 1600,
       "node_price_hr_usd": 36.13,
       "price_per_gpu_hr_usd": 4.52,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "FI, Helsinki"
+        "US, Kansas City, MO",
+        "FR, Paris"
       ],
       "is_reference": false
     },
@@ -824,7 +825,7 @@
       "ram_gb": 185,
       "node_price_hr_usd": 7.26,
       "price_per_gpu_hr_usd": 7.26,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "FI, Central"
       ],
@@ -1266,7 +1267,7 @@
       "ram_gb": 1440,
       "node_price_hr_usd": 20.8,
       "price_per_gpu_hr_usd": 2.6,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "CA, Montreal"
       ],
@@ -1485,7 +1486,7 @@
       "ram_gb": 1600,
       "node_price_hr_usd": 30.93,
       "price_per_gpu_hr_usd": 3.87,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "FI, Helsinki"
       ],
@@ -1506,7 +1507,7 @@
       "ram_gb": 200,
       "node_price_hr_usd": 3.98,
       "price_per_gpu_hr_usd": 3.98,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "FI, Helsinki"
       ],
@@ -1551,8 +1552,8 @@
       "price_per_gpu_hr_usd": 4.09,
       "in_stock": true,
       "live_regions": [
-        "US, Dallas, TX",
-        "US, Atlanta, GA"
+        "US, Atlanta, GA",
+        "US, Austin, TX"
       ],
       "is_reference": false
     },
@@ -1892,7 +1893,7 @@
       "ram_gb": 120,
       "node_price_hr_usd": 1.35,
       "price_per_gpu_hr_usd": 1.35,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "CA, Montreal"
       ],
@@ -1956,10 +1957,9 @@
       "ram_gb": 128,
       "node_price_hr_usd": 2.7,
       "price_per_gpu_hr_usd": 1.35,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "US, Des Moines, IA",
-        "US, Wichita, KS"
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -1978,10 +1978,9 @@
       "ram_gb": 64,
       "node_price_hr_usd": 1.35,
       "price_per_gpu_hr_usd": 1.35,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "US, Wichita, KS",
-        "US, Kansas City, KS"
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -2148,7 +2147,7 @@
       "ram_gb": 240,
       "node_price_hr_usd": 3.71,
       "price_per_gpu_hr_usd": 1.85,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "FI, Central"
       ],
@@ -2211,9 +2210,10 @@
       "ram_gb": 120,
       "node_price_hr_usd": 2.0,
       "price_per_gpu_hr_usd": 2.0,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Culpeper, VA"
+        "US, Sparks, NV",
+        "US, Fairview, OH"
       ],
       "is_reference": false
     },
@@ -2364,8 +2364,8 @@
       "price_per_gpu_hr_usd": 3.0,
       "in_stock": true,
       "live_regions": [
-        "US, Chicago, IL",
-        "US, Dulles, VA"
+        "US, Dulles, VA",
+        "US, Chicago, IL"
       ],
       "is_reference": false
     },
@@ -2662,7 +2662,6 @@
       "price_per_gpu_hr_usd": 1.99,
       "in_stock": true,
       "live_regions": [
-        "IN, Mumbai",
         "US, Phoenix, AZ",
         "US, Dulles, VA"
       ],
@@ -2710,7 +2709,7 @@
         "US, San Jose, Ca",
         "US, Phoenix, AZ",
         "JP, Tokyo",
-        "US, Dulles, VA"
+        "DE, Frankfurt"
       ],
       "is_reference": false
     },
@@ -2904,7 +2903,7 @@
       "ram_gb": 72,
       "node_price_hr_usd": 0.88,
       "price_per_gpu_hr_usd": 0.88,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA",
         "US, Kansas City, KS"
@@ -2992,7 +2991,7 @@
       "ram_gb": 1470,
       "node_price_hr_usd": 15.0,
       "price_per_gpu_hr_usd": 1.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Houston, TX",
         "US, Culpeper, VA"
@@ -3058,7 +3057,7 @@
       "ram_gb": 1176,
       "node_price_hr_usd": 12.0,
       "price_per_gpu_hr_usd": 1.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Houston, TX",
         "US, Culpeper, VA"
@@ -3080,7 +3079,7 @@
       "ram_gb": 588,
       "node_price_hr_usd": 6.0,
       "price_per_gpu_hr_usd": 1.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Houston, TX",
         "US, Culpeper, VA"
@@ -3232,7 +3231,7 @@
       "ram_gb": 60,
       "node_price_hr_usd": 2.14,
       "price_per_gpu_hr_usd": 2.14,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "FI, Central"
       ],
@@ -3569,10 +3568,9 @@
       "ram_gb": 160,
       "node_price_hr_usd": 1.94,
       "price_per_gpu_hr_usd": 0.97,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "US, Kansas City, KS",
-        "US, Kansas City, MO"
+        "US, Kansas City, KS"
       ],
       "is_reference": false
     },
@@ -3591,7 +3589,7 @@
       "ram_gb": 80,
       "node_price_hr_usd": 0.97,
       "price_per_gpu_hr_usd": 0.97,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA",
         "US, Kansas City, KS"
@@ -3851,10 +3849,9 @@
       "ram_gb": 58,
       "node_price_hr_usd": 0.5,
       "price_per_gpu_hr_usd": 0.5,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "CA, Montreal",
-        "NO, Oslo"
+        "CA, Montreal"
       ],
       "is_reference": false
     },
@@ -3917,9 +3914,10 @@
       "ram_gb": 96,
       "node_price_hr_usd": 1.14,
       "price_per_gpu_hr_usd": 0.57,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Kansas City, KS"
+        "US, Kansas City, KS",
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -3938,9 +3936,10 @@
       "ram_gb": 192,
       "node_price_hr_usd": 2.28,
       "price_per_gpu_hr_usd": 0.57,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
-        "US, Kansas City, KS"
+        "US, Kansas City, KS",
+        "US, Kansas City, MO"
       ],
       "is_reference": false
     },
@@ -3961,7 +3960,8 @@
       "price_per_gpu_hr_usd": 0.57,
       "in_stock": true,
       "live_regions": [
-        "US, Kansas City, KS"
+        "US, Kansas City, KS",
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
