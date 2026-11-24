@@ -24,17 +24,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Fetch live multi-cloud GPU prices, stock & daily history snapshot
+      - name: Fetch live multi-cloud GPU prices, stock, SSR subpages & daily history snapshot
         run: |
           python3 scripts/sync_gpu_rates.py
           python3 scripts/prerender_seo.py
-      - name: Commit updated gpu_rates.json, SSR index.html, sitemap & history archive
+          python3 scripts/build_seo_pages.py
+      - name: Commit updated gpu_rates.json, SSR index/subpages, sitemap & history archive
         run: |
           git config user.name "GPURentalRates Bot"
           git config user.email "bot@gpurentalrates.com"
-          git add public/gpu_rates.json public/index.html public/sitemap.xml public/*.txt public/history/
+          git add public/
           if ! git diff --staged --quiet; then
-            git commit -m "chore(rates): auto-sync live cloud GPU pricing, SSR HTML & daily history [skip ci]"
+            git commit -m "chore(rates): auto-sync live cloud GPU pricing, 6 SEO subpages & daily history [skip ci]"
             git pull --rebase -X ours origin main
             git push origin HEAD:main
           fi

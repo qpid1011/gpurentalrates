@@ -1,0 +1,75 @@
+{
+  "version": "5.0",
+  "max_new_pages_per_week": 2,
+  "max_total_pages": 15,
+  "guardrails": {
+    "max_new_pages_per_week": 2,
+    "max_total_pages": 15,
+    "freeze_homepage_title_h1": true,
+    "striking_distance_min_impressions": 2,
+    "striking_distance_position_range": [8, 80]
+  },
+  "observed_gsc_queries": [],
+  "pages": [
+    {
+      "slug": "h100-rental-rates",
+      "gpu_keys": ["H100"],
+      "target_query": "NVIDIA H100 GPU Rental Rates & Hourly Price",
+      "short_label": "NVIDIA H100 80GB",
+      "default_gpu_count": 8,
+      "default_hours": 72,
+      "ref_label": "AWS p5.48xlarge / GCP a3-highgpu-8g List",
+      "interconnect_faq": "Choose H100 SXM5 (900 GB/s NVLink + NVSwitch, 3.35 TB/s HBM3) for multi-GPU 70B–405B distributed training, FSDP/DeepSpeed ZeRO-3, or tensor-parallel FP8 serving where all-reduce communication dominates step time. Choose H100 PCIe Gen5 (128 GB/s bidirectional, 2.0 TB/s HBM2e/HBM3) for single-GPU vLLM inference, LoRA/QLoRA fine-tuning, and batch embeddings at 15%–30% lower hourly rental rates."
+    },
+    {
+      "slug": "h200-rental-rates",
+      "gpu_keys": ["H200"],
+      "target_query": "NVIDIA H200 141GB Cloud Rental Rates & Hourly Price",
+      "short_label": "NVIDIA H200 141GB",
+      "default_gpu_count": 8,
+      "default_hours": 72,
+      "ref_label": "AWS EC2 p5en.48xlarge On-Demand List",
+      "interconnect_faq": "NVIDIA H200 SXM5 pairs 141 GB of HBM3e memory at 4.8 TB/s bandwidth (1.43x H100 bandwidth, 1.76x VRAM) with 900 GB/s NVLink. Rent 4x or 8x H200 SXM5 nodes when serving 70B–120B FP8/BF16 models with long KV-cache contexts (64K–128K tokens) or fitting larger micro-batches without activation checkpointing overhead."
+    },
+    {
+      "slug": "b200-rental-rates",
+      "gpu_keys": ["B200"],
+      "target_query": "NVIDIA B200 192GB Blackwell Cloud Rental Rates",
+      "short_label": "NVIDIA B200 192GB",
+      "default_gpu_count": 8,
+      "default_hours": 168,
+      "ref_label": "Tier-1 Hyperscaler 8x B200 On-Demand Benchmark",
+      "interconnect_faq": "NVIDIA B200 SXM6 delivers 192 GB HBM3e (8.0 TB/s) and 5th-Gen NVLink (1.8 TB/s per GPU) with native 2nd-Gen Transformer Engine FP4/FP8 support. Select 8x B200 SXM6 NVSwitch clusters for frontier pre-training, MoE routing, and high-throughput FP4 reasoning inference where per-token cost beats Hopper despite higher hourly node rates."
+    },
+    {
+      "slug": "a100-rental-rates",
+      "gpu_keys": ["A100_80G", "A100_40G"],
+      "target_query": "NVIDIA A100 GPU Rental Rates (80GB & 40GB Hourly Pricing)",
+      "short_label": "NVIDIA A100 80GB & 40GB",
+      "default_gpu_count": 8,
+      "default_hours": 72,
+      "ref_label": "AWS EC2 p4de.24xlarge (8x A100 80GB) List",
+      "interconnect_faq": "A100 80GB SXM4 provides 2.0 TB/s HBM2e and 600 GB/s NVLink, making it a cost-efficient workhorse for 13B–70B BF16 fine-tuning and multi-GPU PyTorch jobs when Hopper/Blackwell FP8 is unnecessary. A100 40GB (1.55 TB/s HBM2) and PCIe Gen4 variants suit 7B–14B inference, classic CV/audio training, and CI evaluation pipelines."
+    },
+    {
+      "slug": "rtx-5090-rental-rates",
+      "gpu_keys": ["RTX5090", "RTX4090"],
+      "target_query": "RTX 5090 & RTX 4090 Cloud GPU Rental Rates",
+      "short_label": "RTX 5090 & RTX 4090",
+      "default_gpu_count": 4,
+      "default_hours": 40,
+      "ref_label": "Managed Workstation Cloud GPU List Benchmark",
+      "interconnect_faq": "RTX 5090 (32 GB GDDR7, 1.79 TB/s, PCIe Gen5) and RTX 4090 (24 GB GDDR6X, 1.01 TB/s, PCIe Gen4) omit NVLink/P2P high-speed fabric, so multi-GPU all-reduce traverses host PCIe. Use 1x–4x RTX 5090/4090 instances for quantized LLM inference (AWQ/GGUF/FP8), diffusion/video rendering, LoRA adapters, and embarrassedly parallel batch workers."
+    },
+    {
+      "slug": "b300-rental-rates",
+      "gpu_keys": ["B300"],
+      "target_query": "NVIDIA B300 288GB Blackwell Ultra Cloud Rental Rates",
+      "short_label": "NVIDIA B300 288GB",
+      "default_gpu_count": 8,
+      "default_hours": 168,
+      "ref_label": "Tier-1 Hyperscaler 8x B300 Ultra Benchmark",
+      "interconnect_faq": "NVIDIA B300 (Blackwell Ultra) expands per-GPU HBM3e capacity to 288 GB (2.3 TB across an 8x SXM6 node) with 1.8 TB/s NVLink 5 and enhanced dense FP4 compute. Rent 8x B300 SXM6 nodes when 405B–1T+ parameter Mixture-of-Experts models or million-token KV caches must reside inside a single high-bandwidth NVSwitch domain."
+    }
+  ]
+}

@@ -9,7 +9,13 @@ import html
 import json
 from pathlib import Path
 import re
+import sys
 import urllib.request
+
+SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+import build_seo_pages  # noqa: E402
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 PUBLIC_DIR = ROOT_DIR / "public"
@@ -145,7 +151,8 @@ def _build_ldjson(data: dict[str, object], iso_date: str) -> str:
 
 def prerender_all(ping_indexnow: bool = False) -> dict[str, object]:
     data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
-    now_dt = datetime.now(timezone.utc)
+    epoch = int(data.get("updated_epoch") or 0)
+    now_dt = datetime.fromtimestamp(epoch, tz=timezone.utc) if epoch > 0 else datetime.now(timezone.utc)
     day_str = now_dt.strftime("%Y-%m-%d")
     iso_str = now_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
     offers = list(data.get("offers") or [])
@@ -191,13 +198,11 @@ def prerender_all(ping_indexnow: bool = False) -> dict[str, object]:
     )
     HTML_PATH.write_text(doc, encoding="utf-8")
 
-    SITEMAP_PATH.write_text(
-        f'<?xml version="1.0" encoding="UTF-8"?>\n'
-        f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        f"  <url>\n    <loc>{SITE_URL}</loc>\n    <lastmod>{day_str}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n"
-        f"</urlset>\n",
-        encoding="utf-8",
-    )
+    seo_res = build_seo_pages.build_all_seo_pages()
+    url_list = re.findall(r"<loc>(.*?)</loc>", SITEMAP_PATH.read_text(encoding="utf-8")) if SITEMAP_PATH.exists() else [SITE_URL]
+    if not url_list:
+        url_list = [SITE_URL]
+
     key_file = PUBLIC_DIR / f"{INDEXNOW_KEY}.txt"
     key_file.write_text(INDEXNOW_KEY, encoding="utf-8")
 
@@ -207,12 +212,12 @@ def prerender_all(ping_indexnow: bool = False) -> dict[str, object]:
             "host": HOST,
             "key": INDEXNOW_KEY,
             "keyLocation": f"{SITE_URL}{INDEXNOW_KEY}.txt",
-            "urlList": [SITE_URL],
+            "urlList": url_list,
         }).encode("utf-8")
         req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
         with urllib.request.urlopen(req, timeout=12) as resp:
             ping_status = resp.status
-    return {"host": HOST, "ssr_rows": len(_select_ssr_offers(offers)), "indexnow_key": INDEXNOW_KEY, "ping_status": ping_status}
+    return {"host": HOST, "ssr_rows": len(_select_ssr_offers(offers)), "url_count": len(url_list), "subpages": len(seo_res.get("subpages") or {}), "indexnow_key": INDEXNOW_KEY, "ping_status": ping_status}
 
 
 if __name__ == "__main__":
