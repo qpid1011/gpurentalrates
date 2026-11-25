@@ -1,13 +1,13 @@
 {
   "site": "GPURentalRates.com",
-  "updated_at_utc": "2026-11-25 08:31 UTC",
-  "updated_epoch": 1795595476,
+  "updated_at_utc": "2026-11-25 21:40 UTC",
+  "updated_epoch": 1795642848,
   "stale_warning": false,
   "summary": {
-    "total_offers": 190,
+    "total_offers": 196,
     "providers_tracked": 22,
     "gpu_models_tracked": 13,
-    "in_stock_offers": 56
+    "in_stock_offers": 65
   },
   "gpu_summaries": [
     {
@@ -17,9 +17,9 @@
       "arch": "Blackwell",
       "offers_count": 6,
       "in_stock_count": 0,
-      "lowest_per_gpu_usd": 8.5,
+      "lowest_per_gpu_usd": 9.01,
       "median_per_gpu_usd": 12.97,
-      "reference_cloud_usd": 23.8,
+      "reference_cloud_usd": 25.23,
       "max_savings_pct": 64
     },
     {
@@ -51,8 +51,8 @@
       "gpu_label": "NVIDIA H200 SXM",
       "vram_gb": 141,
       "arch": "Hopper",
-      "offers_count": 14,
-      "in_stock_count": 3,
+      "offers_count": 15,
+      "in_stock_count": 6,
       "lowest_per_gpu_usd": 3.0,
       "median_per_gpu_usd": 4.52,
       "reference_cloud_usd": 8.6,
@@ -64,9 +64,9 @@
       "vram_gb": 80,
       "arch": "Hopper",
       "offers_count": 39,
-      "in_stock_count": 8,
+      "in_stock_count": 11,
       "lowest_per_gpu_usd": 1.66,
-      "median_per_gpu_usd": 2.73,
+      "median_per_gpu_usd": 3.13,
       "reference_cloud_usd": 8.8,
       "max_savings_pct": 81
     },
@@ -77,9 +77,9 @@
       "arch": "Hopper",
       "offers_count": 3,
       "in_stock_count": 0,
-      "lowest_per_gpu_usd": 3.16,
-      "median_per_gpu_usd": 3.16,
-      "reference_cloud_usd": 8.85,
+      "lowest_per_gpu_usd": 3.31,
+      "median_per_gpu_usd": 3.31,
+      "reference_cloud_usd": 9.27,
       "max_savings_pct": 64
     },
     {
@@ -88,7 +88,7 @@
       "vram_gb": 80,
       "arch": "Ampere",
       "offers_count": 30,
-      "in_stock_count": 15,
+      "in_stock_count": 17,
       "lowest_per_gpu_usd": 1.35,
       "median_per_gpu_usd": 1.85,
       "reference_cloud_usd": 5.12,
@@ -100,7 +100,7 @@
       "vram_gb": 40,
       "arch": "Ampere",
       "offers_count": 16,
-      "in_stock_count": 4,
+      "in_stock_count": 6,
       "lowest_per_gpu_usd": 1.36,
       "median_per_gpu_usd": 1.99,
       "reference_cloud_usd": 3.81,
@@ -112,7 +112,7 @@
       "vram_gb": 48,
       "arch": "Ada",
       "offers_count": 19,
-      "in_stock_count": 9,
+      "in_stock_count": 4,
       "lowest_per_gpu_usd": 0.69,
       "median_per_gpu_usd": 1.5,
       "reference_cloud_usd": 1.93,
@@ -123,10 +123,10 @@
       "gpu_label": "NVIDIA RTX 5090 32GB",
       "vram_gb": 32,
       "arch": "Blackwell",
-      "offers_count": 6,
-      "in_stock_count": 4,
+      "offers_count": 3,
+      "in_stock_count": 1,
       "lowest_per_gpu_usd": 0.65,
-      "median_per_gpu_usd": 0.65,
+      "median_per_gpu_usd": 0.7,
       "reference_cloud_usd": 1.82,
       "max_savings_pct": 64
     },
@@ -150,7 +150,7 @@
       "offers_count": 9,
       "in_stock_count": 4,
       "lowest_per_gpu_usd": 0.6,
-      "median_per_gpu_usd": 0.97,
+      "median_per_gpu_usd": 0.74,
       "reference_cloud_usd": 1.68,
       "max_savings_pct": 64
     },
@@ -159,36 +159,15 @@
       "gpu_label": "NVIDIA RTX A6000 48GB",
       "vram_gb": 48,
       "arch": "Ampere",
-      "offers_count": 25,
-      "in_stock_count": 8,
-      "lowest_per_gpu_usd": 0.49,
-      "median_per_gpu_usd": 0.58,
-      "reference_cloud_usd": 1.37,
+      "offers_count": 33,
+      "in_stock_count": 15,
+      "lowest_per_gpu_usd": 0.5,
+      "median_per_gpu_usd": 0.57,
+      "reference_cloud_usd": 1.4,
       "max_savings_pct": 64
     }
   ],
   "offers": [
-    {
-      "provider_id": "excesssupply",
-      "provider_name": "ExcessSupply",
-      "provider_url": "https://shadeform.ai",
-      "tier": "SpotPool",
-      "instance_name": "8x-b300-sxm6-ac.384cpu.2267gib.7448gib.5b62e15793",
-      "gpu_key": "B300",
-      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
-      "vram_gb": 288,
-      "num_gpus": 8,
-      "interconnect": "SXM6 + NVLink",
-      "vcpus": 754,
-      "ram_gb": 2090,
-      "node_price_hr_usd": 68.0,
-      "price_per_gpu_hr_usd": 8.5,
-      "in_stock": false,
-      "live_regions": [
-        "IS, Reykjavík"
-      ],
-      "is_reference": false
-    },
     {
       "provider_id": "scaleway",
       "provider_name": "Scaleway",
@@ -207,6 +186,27 @@
       "in_stock": false,
       "live_regions": [
         "FR, Paris"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "excesssupply",
+      "provider_name": "ExcessSupply",
+      "provider_url": "https://shadeform.ai",
+      "tier": "SpotPool",
+      "instance_name": "8x-b300-sxm6-ac.384cpu.2267gib.7448gib.5b62e15793",
+      "gpu_key": "B300",
+      "gpu_label": "NVIDIA B300 (Blackwell Ultra)",
+      "vram_gb": 288,
+      "num_gpus": 8,
+      "interconnect": "SXM6 + NVLink",
+      "vcpus": 754,
+      "ram_gb": 2090,
+      "node_price_hr_usd": 76.0,
+      "price_per_gpu_hr_usd": 9.5,
+      "in_stock": false,
+      "live_regions": [
+        "IS, Reykjavík"
       ],
       "is_reference": false
     },
@@ -577,19 +577,19 @@
       "provider_name": "ExcessSupply",
       "provider_url": "https://shadeform.ai",
       "tier": "SpotPool",
-      "instance_name": "h200.8x.sapphire-rapids.208vcpu.1904gib.4x7tb",
+      "instance_name": "8x-h200.192cpu.3023gib.2976gib.a94d17726b",
       "gpu_key": "H200",
       "gpu_label": "NVIDIA H200 SXM",
       "vram_gb": 141,
       "num_gpus": 8,
       "interconnect": "SXM5 + NVLink",
-      "vcpus": 208,
-      "ram_gb": 1904,
+      "vcpus": 180,
+      "ram_gb": 2862,
       "node_price_hr_usd": 32.0,
       "price_per_gpu_hr_usd": 4.0,
       "in_stock": true,
       "live_regions": [
-        "JP, Kagawa"
+        "US, New Castle, DE"
       ],
       "is_reference": false
     },
@@ -634,6 +634,27 @@
       "live_regions": [
         "US, Raleigh, NC",
         "US, Dallas, TX"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "excesssupply",
+      "provider_name": "ExcessSupply",
+      "provider_url": "https://shadeform.ai",
+      "tier": "SpotPool",
+      "instance_name": "h200.8x.sapphire-rapids.208vcpu.1904gib.4x7tb",
+      "gpu_key": "H200",
+      "gpu_label": "NVIDIA H200 SXM",
+      "vram_gb": 141,
+      "num_gpus": 8,
+      "interconnect": "SXM5 + NVLink",
+      "vcpus": 208,
+      "ram_gb": 1904,
+      "node_price_hr_usd": 34.8,
+      "price_per_gpu_hr_usd": 4.35,
+      "in_stock": true,
+      "live_regions": [
+        "JP, Kagawa"
       ],
       "is_reference": false
     },
@@ -718,10 +739,9 @@
       "ram_gb": 1600,
       "node_price_hr_usd": 36.13,
       "price_per_gpu_hr_usd": 4.52,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "US, Kansas City, MO",
-        "FR, Paris"
+        "FI, Helsinki"
       ],
       "is_reference": false
     },
@@ -783,7 +803,7 @@
       "ram_gb": 740,
       "node_price_hr_usd": 28.18,
       "price_per_gpu_hr_usd": 7.04,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "FI, Central"
       ],
@@ -952,7 +972,7 @@
       "ram_gb": 192,
       "node_price_hr_usd": 1.99,
       "price_per_gpu_hr_usd": 1.99,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "US, Dallas, TX"
       ],
@@ -1064,90 +1084,6 @@
       "is_reference": false
     },
     {
-      "provider_id": "imwt",
-      "provider_name": "IMWT Cloud",
-      "provider_url": "https://shadeform.ai",
-      "tier": "NeoCloud",
-      "instance_name": "gpu_8x_h100",
-      "gpu_key": "H100",
-      "gpu_label": "NVIDIA H100 80GB",
-      "vram_gb": 80,
-      "num_gpus": 8,
-      "interconnect": "PCIE",
-      "vcpus": 128,
-      "ram_gb": 512,
-      "node_price_hr_usd": 19.84,
-      "price_per_gpu_hr_usd": 2.48,
-      "in_stock": false,
-      "live_regions": [
-        "US, Des Moines, IA"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "imwt",
-      "provider_name": "IMWT Cloud",
-      "provider_url": "https://shadeform.ai",
-      "tier": "NeoCloud",
-      "instance_name": "gpu_2x_h100",
-      "gpu_key": "H100",
-      "gpu_label": "NVIDIA H100 80GB",
-      "vram_gb": 80,
-      "num_gpus": 2,
-      "interconnect": "PCIE",
-      "vcpus": 40,
-      "ram_gb": 256,
-      "node_price_hr_usd": 4.96,
-      "price_per_gpu_hr_usd": 2.48,
-      "in_stock": false,
-      "live_regions": [
-        "US, Des Moines, IA"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "imwt",
-      "provider_name": "IMWT Cloud",
-      "provider_url": "https://shadeform.ai",
-      "tier": "NeoCloud",
-      "instance_name": "gpu_4x_h100",
-      "gpu_key": "H100",
-      "gpu_label": "NVIDIA H100 80GB",
-      "vram_gb": 80,
-      "num_gpus": 4,
-      "interconnect": "PCIE",
-      "vcpus": 64,
-      "ram_gb": 512,
-      "node_price_hr_usd": 9.92,
-      "price_per_gpu_hr_usd": 2.48,
-      "in_stock": false,
-      "live_regions": [
-        "US, Des Moines, IA"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "imwt",
-      "provider_name": "IMWT Cloud",
-      "provider_url": "https://shadeform.ai",
-      "tier": "NeoCloud",
-      "instance_name": "gpu_1x_h100",
-      "gpu_key": "H100",
-      "gpu_label": "NVIDIA H100 80GB",
-      "vram_gb": 80,
-      "num_gpus": 1,
-      "interconnect": "PCIE",
-      "vcpus": 20,
-      "ram_gb": 128,
-      "node_price_hr_usd": 2.48,
-      "price_per_gpu_hr_usd": 2.48,
-      "in_stock": false,
-      "live_regions": [
-        "US, Des Moines, IA"
-      ],
-      "is_reference": false
-    },
-    {
       "provider_id": "denvr",
       "provider_name": "Denvr Dataworks",
       "provider_url": "https://www.denvrdata.com",
@@ -1225,7 +1161,7 @@
       "ram_gb": 180,
       "node_price_hr_usd": 2.5,
       "price_per_gpu_hr_usd": 2.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "CA, Montreal"
       ],
@@ -1246,7 +1182,7 @@
       "ram_gb": 360,
       "node_price_hr_usd": 5.0,
       "price_per_gpu_hr_usd": 2.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "CA, Montreal"
       ],
@@ -1274,6 +1210,28 @@
       "is_reference": false
     },
     {
+      "provider_id": "excesssupply",
+      "provider_name": "ExcessSupply",
+      "provider_url": "https://shadeform.ai",
+      "tier": "SpotPool",
+      "instance_name": "8x-h100-80gb-hbm3.192cpu.1007gib.7149gib.48a1f6144f",
+      "gpu_key": "H100",
+      "gpu_label": "NVIDIA H100 80GB",
+      "vram_gb": 80,
+      "num_gpus": 8,
+      "interconnect": "SXM5 + NVLink",
+      "vcpus": 176,
+      "ram_gb": 944,
+      "node_price_hr_usd": 24.0,
+      "price_per_gpu_hr_usd": 3.0,
+      "in_stock": false,
+      "live_regions": [
+        "JP, Sendai",
+        "JP, Fukushima"
+      ],
+      "is_reference": false
+    },
+    {
       "provider_id": "massedcompute",
       "provider_name": "Massed Compute",
       "provider_url": "https://massedcompute.com",
@@ -1286,8 +1244,8 @@
       "interconnect": "PCIE",
       "vcpus": 128,
       "ram_gb": 512,
-      "node_price_hr_usd": 21.82,
-      "price_per_gpu_hr_usd": 2.73,
+      "node_price_hr_usd": 25.04,
+      "price_per_gpu_hr_usd": 3.13,
       "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA",
@@ -1308,12 +1266,96 @@
       "interconnect": "PCIE",
       "vcpus": 64,
       "ram_gb": 512,
-      "node_price_hr_usd": 10.91,
-      "price_per_gpu_hr_usd": 2.73,
+      "node_price_hr_usd": 12.52,
+      "price_per_gpu_hr_usd": 3.13,
       "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA",
         "US, Kansas City, KS"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "imwt",
+      "provider_name": "IMWT Cloud",
+      "provider_url": "https://shadeform.ai",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_8x_h100",
+      "gpu_key": "H100",
+      "gpu_label": "NVIDIA H100 80GB",
+      "vram_gb": 80,
+      "num_gpus": 8,
+      "interconnect": "PCIE",
+      "vcpus": 128,
+      "ram_gb": 512,
+      "node_price_hr_usd": 25.04,
+      "price_per_gpu_hr_usd": 3.13,
+      "in_stock": false,
+      "live_regions": [
+        "US, Des Moines, IA"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "imwt",
+      "provider_name": "IMWT Cloud",
+      "provider_url": "https://shadeform.ai",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_2x_h100",
+      "gpu_key": "H100",
+      "gpu_label": "NVIDIA H100 80GB",
+      "vram_gb": 80,
+      "num_gpus": 2,
+      "interconnect": "PCIE",
+      "vcpus": 40,
+      "ram_gb": 256,
+      "node_price_hr_usd": 6.26,
+      "price_per_gpu_hr_usd": 3.13,
+      "in_stock": false,
+      "live_regions": [
+        "US, Des Moines, IA"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "imwt",
+      "provider_name": "IMWT Cloud",
+      "provider_url": "https://shadeform.ai",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_4x_h100",
+      "gpu_key": "H100",
+      "gpu_label": "NVIDIA H100 80GB",
+      "vram_gb": 80,
+      "num_gpus": 4,
+      "interconnect": "PCIE",
+      "vcpus": 64,
+      "ram_gb": 512,
+      "node_price_hr_usd": 12.52,
+      "price_per_gpu_hr_usd": 3.13,
+      "in_stock": false,
+      "live_regions": [
+        "US, Des Moines, IA"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "imwt",
+      "provider_name": "IMWT Cloud",
+      "provider_url": "https://shadeform.ai",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_1x_h100",
+      "gpu_key": "H100",
+      "gpu_label": "NVIDIA H100 80GB",
+      "vram_gb": 80,
+      "num_gpus": 1,
+      "interconnect": "PCIE",
+      "vcpus": 20,
+      "ram_gb": 128,
+      "node_price_hr_usd": 3.13,
+      "price_per_gpu_hr_usd": 3.13,
+      "in_stock": false,
+      "live_regions": [
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -1330,8 +1372,8 @@
       "interconnect": "PCIE",
       "vcpus": 40,
       "ram_gb": 256,
-      "node_price_hr_usd": 5.46,
-      "price_per_gpu_hr_usd": 2.73,
+      "node_price_hr_usd": 6.26,
+      "price_per_gpu_hr_usd": 3.13,
       "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA"
@@ -1351,33 +1393,11 @@
       "interconnect": "PCIE",
       "vcpus": 20,
       "ram_gb": 128,
-      "node_price_hr_usd": 2.73,
-      "price_per_gpu_hr_usd": 2.73,
+      "node_price_hr_usd": 3.13,
+      "price_per_gpu_hr_usd": 3.13,
       "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "excesssupply",
-      "provider_name": "ExcessSupply",
-      "provider_url": "https://shadeform.ai",
-      "tier": "SpotPool",
-      "instance_name": "8x-h100-80gb-hbm3.192cpu.1007gib.7149gib.48a1f6144f",
-      "gpu_key": "H100",
-      "gpu_label": "NVIDIA H100 80GB",
-      "vram_gb": 80,
-      "num_gpus": 8,
-      "interconnect": "SXM5 + NVLink",
-      "vcpus": 176,
-      "ram_gb": 944,
-      "node_price_hr_usd": 24.0,
-      "price_per_gpu_hr_usd": 3.0,
-      "in_stock": false,
-      "live_regions": [
-        "JP, Sendai",
-        "JP, Fukushima"
       ],
       "is_reference": false
     },
@@ -1440,9 +1460,8 @@
       "ram_gb": 480,
       "node_price_hr_usd": 6.6,
       "price_per_gpu_hr_usd": 3.3,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "PL, Warsaw",
         "FR, Paris"
       ],
       "is_reference": false
@@ -1462,10 +1481,9 @@
       "ram_gb": 240,
       "node_price_hr_usd": 3.3,
       "price_per_gpu_hr_usd": 3.3,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "FR, Paris",
-        "PL, Warsaw"
+        "FR, Paris"
       ],
       "is_reference": false
     },
@@ -1570,7 +1588,7 @@
       "ram_gb": 450,
       "node_price_hr_usd": 8.38,
       "price_per_gpu_hr_usd": 4.19,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "US, Atlanta, GA",
         "US, Austin, TX"
@@ -1613,9 +1631,10 @@
       "ram_gb": 225,
       "node_price_hr_usd": 4.36,
       "price_per_gpu_hr_usd": 4.36,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "US, Dallas, TX",
+        "US, Atlanta, GA",
         "US, Austin, TX"
       ],
       "is_reference": false
@@ -1761,8 +1780,8 @@
       "interconnect": "PCIE + NVLink",
       "vcpus": 140,
       "ram_gb": 1500,
-      "node_price_hr_usd": 25.28,
-      "price_per_gpu_hr_usd": 3.16,
+      "node_price_hr_usd": 26.48,
+      "price_per_gpu_hr_usd": 3.31,
       "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA"
@@ -1782,8 +1801,8 @@
       "interconnect": "PCIE + NVLink",
       "vcpus": 40,
       "ram_gb": 256,
-      "node_price_hr_usd": 6.32,
-      "price_per_gpu_hr_usd": 3.16,
+      "node_price_hr_usd": 6.62,
+      "price_per_gpu_hr_usd": 3.31,
       "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA"
@@ -1803,8 +1822,8 @@
       "interconnect": "PCIE + NVLink",
       "vcpus": 80,
       "ram_gb": 512,
-      "node_price_hr_usd": 12.64,
-      "price_per_gpu_hr_usd": 3.16,
+      "node_price_hr_usd": 13.24,
+      "price_per_gpu_hr_usd": 3.31,
       "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA"
@@ -1918,6 +1937,27 @@
       "is_reference": false
     },
     {
+      "provider_id": "hyperstack",
+      "provider_name": "Hyperstack",
+      "provider_url": "https://hyperstack.cloud",
+      "tier": "NeoCloud",
+      "instance_name": "n2-A100x8-NVLink-v2",
+      "gpu_key": "A100_80G",
+      "gpu_label": "NVIDIA A100 80GB",
+      "vram_gb": 80,
+      "num_gpus": 8,
+      "interconnect": "PCIE + NVLink",
+      "vcpus": 252,
+      "ram_gb": 960,
+      "node_price_hr_usd": 11.2,
+      "price_per_gpu_hr_usd": 1.4,
+      "in_stock": false,
+      "live_regions": [
+        "CA, Montreal"
+      ],
+      "is_reference": false
+    },
+    {
       "provider_id": "massedcompute",
       "provider_name": "Massed Compute",
       "provider_url": "https://massedcompute.com",
@@ -1930,8 +1970,8 @@
       "interconnect": "PCIE",
       "vcpus": 110,
       "ram_gb": 512,
-      "node_price_hr_usd": 10.8,
-      "price_per_gpu_hr_usd": 1.35,
+      "node_price_hr_usd": 11.2,
+      "price_per_gpu_hr_usd": 1.4,
       "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA",
@@ -1952,12 +1992,12 @@
       "interconnect": "PCIE",
       "vcpus": 30,
       "ram_gb": 128,
-      "node_price_hr_usd": 2.7,
-      "price_per_gpu_hr_usd": 1.35,
-      "in_stock": false,
+      "node_price_hr_usd": 2.8,
+      "price_per_gpu_hr_usd": 1.4,
+      "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA",
-        "US, Wichita, KS"
+        "US, Kansas City, KS"
       ],
       "is_reference": false
     },
@@ -1974,10 +2014,11 @@
       "interconnect": "PCIE",
       "vcpus": 12,
       "ram_gb": 64,
-      "node_price_hr_usd": 1.35,
-      "price_per_gpu_hr_usd": 1.35,
+      "node_price_hr_usd": 1.4,
+      "price_per_gpu_hr_usd": 1.4,
       "in_stock": true,
       "live_regions": [
+        "US, Kansas City, KS",
         "US, Des Moines, IA"
       ],
       "is_reference": false
@@ -1995,8 +2036,8 @@
       "interconnect": "PCIE",
       "vcpus": 54,
       "ram_gb": 256,
-      "node_price_hr_usd": 5.4,
-      "price_per_gpu_hr_usd": 1.35,
+      "node_price_hr_usd": 5.6,
+      "price_per_gpu_hr_usd": 1.4,
       "in_stock": false,
       "live_regions": [
         "US, Wichita, KS",
@@ -2017,8 +2058,8 @@
       "interconnect": "SXM4",
       "vcpus": 14,
       "ram_gb": 100,
-      "node_price_hr_usd": 1.38,
-      "price_per_gpu_hr_usd": 1.38,
+      "node_price_hr_usd": 1.43,
+      "price_per_gpu_hr_usd": 1.43,
       "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA"
@@ -2038,32 +2079,11 @@
       "interconnect": "SXM4",
       "vcpus": 126,
       "ram_gb": 1500,
-      "node_price_hr_usd": 11.04,
-      "price_per_gpu_hr_usd": 1.38,
+      "node_price_hr_usd": 11.44,
+      "price_per_gpu_hr_usd": 1.43,
       "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "hyperstack",
-      "provider_name": "Hyperstack",
-      "provider_url": "https://hyperstack.cloud",
-      "tier": "NeoCloud",
-      "instance_name": "n2-A100x8-NVLink-v2",
-      "gpu_key": "A100_80G",
-      "gpu_label": "NVIDIA A100 80GB",
-      "vram_gb": 80,
-      "num_gpus": 8,
-      "interconnect": "PCIE + NVLink",
-      "vcpus": 252,
-      "ram_gb": 960,
-      "node_price_hr_usd": 11.2,
-      "price_per_gpu_hr_usd": 1.4,
-      "in_stock": false,
-      "live_regions": [
-        "CA, Montreal"
       ],
       "is_reference": false
     },
@@ -2103,7 +2123,7 @@
       "ram_gb": 940,
       "node_price_hr_usd": 12.2,
       "price_per_gpu_hr_usd": 1.52,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Houston, TX"
       ],
@@ -2334,10 +2354,10 @@
       "ram_gb": 1800,
       "node_price_hr_usd": 22.32,
       "price_per_gpu_hr_usd": 2.79,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "IN, Mumbai",
-        "US, Chicago, IL"
+        "US, Chicago, IL",
+        "US, Dulles, VA"
       ],
       "is_reference": false
     },
@@ -2356,9 +2376,9 @@
       "ram_gb": 1800,
       "node_price_hr_usd": 24.0,
       "price_per_gpu_hr_usd": 3.0,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "AU, Sydney",
+        "US, Dulles, VA",
         "US, Chicago, IL"
       ],
       "is_reference": false
@@ -2656,8 +2676,8 @@
       "price_per_gpu_hr_usd": 1.99,
       "in_stock": true,
       "live_regions": [
-        "IN, Mumbai",
         "US, Phoenix, AZ",
+        "IN, Mumbai",
         "US, Dulles, VA"
       ],
       "is_reference": false
@@ -2677,10 +2697,9 @@
       "ram_gb": 800,
       "node_price_hr_usd": 7.96,
       "price_per_gpu_hr_usd": 1.99,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "US, Dallas, TX",
-        "IN, Mumbai"
+        "US, Dallas, TX"
       ],
       "is_reference": false
     },
@@ -2699,10 +2718,12 @@
       "ram_gb": 1800,
       "node_price_hr_usd": 15.92,
       "price_per_gpu_hr_usd": 1.99,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "IN, Mumbai",
-        "US, Chicago, IL"
+        "JP, Tokyo",
+        "DE, Frankfurt",
+        "IL, Jerusalem",
+        "US, Dulles, VA"
       ],
       "is_reference": false
     },
@@ -2894,10 +2915,11 @@
       "interconnect": "PCIE",
       "vcpus": 12,
       "ram_gb": 72,
-      "node_price_hr_usd": 0.88,
-      "price_per_gpu_hr_usd": 0.88,
+      "node_price_hr_usd": 0.98,
+      "price_per_gpu_hr_usd": 0.98,
       "in_stock": true,
       "live_regions": [
+        "US, Des Moines, IA",
         "US, Kansas City, KS"
       ],
       "is_reference": false
@@ -2915,11 +2937,12 @@
       "interconnect": "PCIE",
       "vcpus": 88,
       "ram_gb": 288,
-      "node_price_hr_usd": 3.52,
-      "price_per_gpu_hr_usd": 0.88,
-      "in_stock": true,
+      "node_price_hr_usd": 3.92,
+      "price_per_gpu_hr_usd": 0.98,
+      "in_stock": false,
       "live_regions": [
-        "US, Kansas City, KS"
+        "US, Kansas City, KS",
+        "US, Kansas City, MO"
       ],
       "is_reference": false
     },
@@ -2936,11 +2959,12 @@
       "interconnect": "PCIE",
       "vcpus": 142,
       "ram_gb": 768,
-      "node_price_hr_usd": 7.04,
-      "price_per_gpu_hr_usd": 0.88,
-      "in_stock": true,
+      "node_price_hr_usd": 7.84,
+      "price_per_gpu_hr_usd": 0.98,
+      "in_stock": false,
       "live_regions": [
-        "US, Kansas City, KS"
+        "US, Des Moines, IA",
+        "US, Kansas City, MO"
       ],
       "is_reference": false
     },
@@ -2957,10 +2981,11 @@
       "interconnect": "PCIE",
       "vcpus": 44,
       "ram_gb": 256,
-      "node_price_hr_usd": 1.76,
-      "price_per_gpu_hr_usd": 0.88,
+      "node_price_hr_usd": 1.96,
+      "price_per_gpu_hr_usd": 0.98,
       "in_stock": true,
       "live_regions": [
+        "US, Des Moines, IA",
         "US, Kansas City, KS"
       ],
       "is_reference": false
@@ -2980,7 +3005,7 @@
       "ram_gb": 1470,
       "node_price_hr_usd": 15.0,
       "price_per_gpu_hr_usd": 1.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Houston, TX",
         "US, Culpeper, VA"
@@ -3046,7 +3071,7 @@
       "ram_gb": 1176,
       "node_price_hr_usd": 12.0,
       "price_per_gpu_hr_usd": 1.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Houston, TX",
         "US, Culpeper, VA"
@@ -3068,7 +3093,7 @@
       "ram_gb": 588,
       "node_price_hr_usd": 6.0,
       "price_per_gpu_hr_usd": 1.5,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Houston, TX",
         "US, Culpeper, VA"
@@ -3231,27 +3256,6 @@
       "provider_name": "ExcessSupply",
       "provider_url": "https://shadeform.ai",
       "tier": "SpotPool",
-      "instance_name": "n3-RTX-5090x1",
-      "gpu_key": "RTX5090",
-      "gpu_label": "NVIDIA RTX 5090 32GB",
-      "vram_gb": 32,
-      "num_gpus": 1,
-      "interconnect": "PCIE",
-      "vcpus": 12,
-      "ram_gb": 120,
-      "node_price_hr_usd": 0.65,
-      "price_per_gpu_hr_usd": 0.65,
-      "in_stock": true,
-      "live_regions": [
-        "NO, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "excesssupply",
-      "provider_name": "ExcessSupply",
-      "provider_url": "https://shadeform.ai",
-      "tier": "SpotPool",
       "instance_name": "n3-RTX-5090x8",
       "gpu_key": "RTX5090",
       "gpu_label": "NVIDIA RTX 5090 32GB",
@@ -3261,48 +3265,6 @@
       "vcpus": 120,
       "ram_gb": 960,
       "node_price_hr_usd": 5.2,
-      "price_per_gpu_hr_usd": 0.65,
-      "in_stock": false,
-      "live_regions": [
-        "NO, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "excesssupply",
-      "provider_name": "ExcessSupply",
-      "provider_url": "https://shadeform.ai",
-      "tier": "SpotPool",
-      "instance_name": "n3-RTX-5090x4",
-      "gpu_key": "RTX5090",
-      "gpu_label": "NVIDIA RTX 5090 32GB",
-      "vram_gb": 32,
-      "num_gpus": 4,
-      "interconnect": "PCIE",
-      "vcpus": 60,
-      "ram_gb": 480,
-      "node_price_hr_usd": 2.6,
-      "price_per_gpu_hr_usd": 0.65,
-      "in_stock": true,
-      "live_regions": [
-        "NO, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "excesssupply",
-      "provider_name": "ExcessSupply",
-      "provider_url": "https://shadeform.ai",
-      "tier": "SpotPool",
-      "instance_name": "n3-RTX-5090x2",
-      "gpu_key": "RTX5090",
-      "gpu_label": "NVIDIA RTX 5090 32GB",
-      "vram_gb": 32,
-      "num_gpus": 2,
-      "interconnect": "PCIE",
-      "vcpus": 24,
-      "ram_gb": 240,
-      "node_price_hr_usd": 1.3,
       "price_per_gpu_hr_usd": 0.65,
       "in_stock": true,
       "live_regions": [
@@ -3325,7 +3287,7 @@
       "ram_gb": 200,
       "node_price_hr_usd": 5.6,
       "price_per_gpu_hr_usd": 0.7,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Casper, WY"
       ],
@@ -3367,7 +3329,7 @@
       "ram_gb": 200,
       "node_price_hr_usd": 3.2,
       "price_per_gpu_hr_usd": 0.4,
-      "in_stock": true,
+      "in_stock": false,
       "live_regions": [
         "US, Casper, WY"
       ],
@@ -3430,7 +3392,7 @@
       "ram_gb": 70,
       "node_price_hr_usd": 0.6,
       "price_per_gpu_hr_usd": 0.6,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "NO, Central"
       ],
@@ -3533,11 +3495,12 @@
       "interconnect": "PCIE",
       "vcpus": 52,
       "ram_gb": 320,
-      "node_price_hr_usd": 3.88,
-      "price_per_gpu_hr_usd": 0.97,
+      "node_price_hr_usd": 2.96,
+      "price_per_gpu_hr_usd": 0.74,
       "in_stock": true,
       "live_regions": [
-        "US, Kansas City, KS"
+        "US, Kansas City, KS",
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -3554,8 +3517,8 @@
       "interconnect": "PCIE",
       "vcpus": 26,
       "ram_gb": 160,
-      "node_price_hr_usd": 1.94,
-      "price_per_gpu_hr_usd": 0.97,
+      "node_price_hr_usd": 1.48,
+      "price_per_gpu_hr_usd": 0.74,
       "in_stock": true,
       "live_regions": [
         "US, Kansas City, KS",
@@ -3576,8 +3539,8 @@
       "interconnect": "PCIE",
       "vcpus": 12,
       "ram_gb": 80,
-      "node_price_hr_usd": 0.97,
-      "price_per_gpu_hr_usd": 0.97,
+      "node_price_hr_usd": 0.74,
+      "price_per_gpu_hr_usd": 0.74,
       "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA",
@@ -3598,11 +3561,12 @@
       "interconnect": "PCIE",
       "vcpus": 104,
       "ram_gb": 640,
-      "node_price_hr_usd": 7.76,
-      "price_per_gpu_hr_usd": 0.97,
-      "in_stock": true,
+      "node_price_hr_usd": 5.92,
+      "price_per_gpu_hr_usd": 0.74,
+      "in_stock": false,
       "live_regions": [
-        "US, Kansas City, KS"
+        "US, Kansas City, MO",
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -3642,7 +3606,7 @@
       "ram_gb": 60,
       "node_price_hr_usd": 1.78,
       "price_per_gpu_hr_usd": 1.78,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
         "FI, Central"
       ],
@@ -3687,94 +3651,6 @@
       "in_stock": false,
       "live_regions": [
         "FI, Central"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "imwt",
-      "provider_name": "IMWT Cloud",
-      "provider_url": "https://shadeform.ai",
-      "tier": "NeoCloud",
-      "instance_name": "gpu_8x_a6000",
-      "gpu_key": "A6000",
-      "gpu_label": "NVIDIA RTX A6000 48GB",
-      "vram_gb": 48,
-      "num_gpus": 8,
-      "interconnect": "PCIE",
-      "vcpus": 62,
-      "ram_gb": 384,
-      "node_price_hr_usd": 3.92,
-      "price_per_gpu_hr_usd": 0.49,
-      "in_stock": false,
-      "live_regions": [
-        "US, Des Moines, IA",
-        "US, Kansas City, MO"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "imwt",
-      "provider_name": "IMWT Cloud",
-      "provider_url": "https://shadeform.ai",
-      "tier": "NeoCloud",
-      "instance_name": "gpu_1x_a6000",
-      "gpu_key": "A6000",
-      "gpu_label": "NVIDIA RTX A6000 48GB",
-      "vram_gb": 48,
-      "num_gpus": 1,
-      "interconnect": "PCIE",
-      "vcpus": 6,
-      "ram_gb": 48,
-      "node_price_hr_usd": 0.49,
-      "price_per_gpu_hr_usd": 0.49,
-      "in_stock": false,
-      "live_regions": [
-        "US, Kansas City, MO",
-        "US, Des Moines, IA"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "imwt",
-      "provider_name": "IMWT Cloud",
-      "provider_url": "https://shadeform.ai",
-      "tier": "NeoCloud",
-      "instance_name": "gpu_2x_a6000",
-      "gpu_key": "A6000",
-      "gpu_label": "NVIDIA RTX A6000 48GB",
-      "vram_gb": 48,
-      "num_gpus": 2,
-      "interconnect": "PCIE",
-      "vcpus": 14,
-      "ram_gb": 96,
-      "node_price_hr_usd": 0.98,
-      "price_per_gpu_hr_usd": 0.49,
-      "in_stock": false,
-      "live_regions": [
-        "US, Des Moines, IA",
-        "US, Kansas City, MO"
-      ],
-      "is_reference": false
-    },
-    {
-      "provider_id": "imwt",
-      "provider_name": "IMWT Cloud",
-      "provider_url": "https://shadeform.ai",
-      "tier": "NeoCloud",
-      "instance_name": "gpu_4x_a6000",
-      "gpu_key": "A6000",
-      "gpu_label": "NVIDIA RTX A6000 48GB",
-      "vram_gb": 48,
-      "num_gpus": 4,
-      "interconnect": "PCIE",
-      "vcpus": 30,
-      "ram_gb": 192,
-      "node_price_hr_usd": 1.96,
-      "price_per_gpu_hr_usd": 0.49,
-      "in_stock": false,
-      "live_regions": [
-        "US, Kansas City, MO",
-        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -3870,6 +3746,92 @@
       "provider_name": "Massed Compute",
       "provider_url": "https://massedcompute.com",
       "tier": "NeoCloud",
+      "instance_name": "gpu_8x_a6000_low_ram",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 8,
+      "interconnect": "PCIE",
+      "vcpus": 62,
+      "ram_gb": 192,
+      "node_price_hr_usd": 4.08,
+      "price_per_gpu_hr_usd": 0.51,
+      "in_stock": false,
+      "live_regions": [
+        "US, Wichita, KS",
+        "US, Des Moines, IA"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "massedcompute",
+      "provider_name": "Massed Compute",
+      "provider_url": "https://massedcompute.com",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_1x_a6000_low_ram",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 1,
+      "interconnect": "PCIE",
+      "vcpus": 6,
+      "ram_gb": 24,
+      "node_price_hr_usd": 0.51,
+      "price_per_gpu_hr_usd": 0.51,
+      "in_stock": true,
+      "live_regions": [
+        "US, Des Moines, IA",
+        "US, Kansas City, KS"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "massedcompute",
+      "provider_name": "Massed Compute",
+      "provider_url": "https://massedcompute.com",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_2x_a6000_low_ram",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 2,
+      "interconnect": "PCIE",
+      "vcpus": 14,
+      "ram_gb": 48,
+      "node_price_hr_usd": 1.02,
+      "price_per_gpu_hr_usd": 0.51,
+      "in_stock": true,
+      "live_regions": [
+        "US, Kansas City, KS"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "massedcompute",
+      "provider_name": "Massed Compute",
+      "provider_url": "https://massedcompute.com",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_4x_a6000_low_ram",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 4,
+      "interconnect": "PCIE",
+      "vcpus": 30,
+      "ram_gb": 96,
+      "node_price_hr_usd": 2.04,
+      "price_per_gpu_hr_usd": 0.51,
+      "in_stock": true,
+      "live_regions": [
+        "US, Kansas City, KS"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "imwt",
+      "provider_name": "IMWT Cloud",
+      "provider_url": "https://shadeform.ai",
+      "tier": "NeoCloud",
       "instance_name": "gpu_8x_a6000",
       "gpu_key": "A6000",
       "gpu_label": "NVIDIA RTX A6000 48GB",
@@ -3878,12 +3840,100 @@
       "interconnect": "PCIE",
       "vcpus": 62,
       "ram_gb": 384,
-      "node_price_hr_usd": 4.56,
-      "price_per_gpu_hr_usd": 0.57,
+      "node_price_hr_usd": 4.24,
+      "price_per_gpu_hr_usd": 0.53,
+      "in_stock": false,
+      "live_regions": [
+        "US, Des Moines, IA",
+        "US, Kansas City, MO"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "imwt",
+      "provider_name": "IMWT Cloud",
+      "provider_url": "https://shadeform.ai",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_1x_a6000",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 1,
+      "interconnect": "PCIE",
+      "vcpus": 6,
+      "ram_gb": 48,
+      "node_price_hr_usd": 0.53,
+      "price_per_gpu_hr_usd": 0.53,
+      "in_stock": false,
+      "live_regions": [
+        "US, Kansas City, MO",
+        "US, Des Moines, IA"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "massedcompute",
+      "provider_name": "Massed Compute",
+      "provider_url": "https://massedcompute.com",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_8x_a6000",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 8,
+      "interconnect": "PCIE",
+      "vcpus": 62,
+      "ram_gb": 384,
+      "node_price_hr_usd": 4.24,
+      "price_per_gpu_hr_usd": 0.53,
       "in_stock": false,
       "live_regions": [
         "US, Des Moines, IA",
         "US, Kansas City, KS"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "imwt",
+      "provider_name": "IMWT Cloud",
+      "provider_url": "https://shadeform.ai",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_2x_a6000",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 2,
+      "interconnect": "PCIE",
+      "vcpus": 14,
+      "ram_gb": 96,
+      "node_price_hr_usd": 1.06,
+      "price_per_gpu_hr_usd": 0.53,
+      "in_stock": false,
+      "live_regions": [
+        "US, Des Moines, IA",
+        "US, Kansas City, MO"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "imwt",
+      "provider_name": "IMWT Cloud",
+      "provider_url": "https://shadeform.ai",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_4x_a6000",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 4,
+      "interconnect": "PCIE",
+      "vcpus": 30,
+      "ram_gb": 192,
+      "node_price_hr_usd": 2.12,
+      "price_per_gpu_hr_usd": 0.53,
+      "in_stock": false,
+      "live_regions": [
+        "US, Kansas City, MO",
+        "US, Des Moines, IA"
       ],
       "is_reference": false
     },
@@ -3900,8 +3950,8 @@
       "interconnect": "PCIE",
       "vcpus": 14,
       "ram_gb": 96,
-      "node_price_hr_usd": 1.14,
-      "price_per_gpu_hr_usd": 0.57,
+      "node_price_hr_usd": 1.06,
+      "price_per_gpu_hr_usd": 0.53,
       "in_stock": true,
       "live_regions": [
         "US, Des Moines, IA"
@@ -3921,8 +3971,8 @@
       "interconnect": "PCIE",
       "vcpus": 30,
       "ram_gb": 192,
-      "node_price_hr_usd": 2.28,
-      "price_per_gpu_hr_usd": 0.57,
+      "node_price_hr_usd": 2.12,
+      "price_per_gpu_hr_usd": 0.53,
       "in_stock": false,
       "live_regions": [
         "US, Kansas City, KS",
@@ -3943,10 +3993,100 @@
       "interconnect": "PCIE",
       "vcpus": 6,
       "ram_gb": 48,
+      "node_price_hr_usd": 0.53,
+      "price_per_gpu_hr_usd": 0.53,
+      "in_stock": true,
+      "live_regions": [
+        "US, Kansas City, KS",
+        "US, Des Moines, IA"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "massedcompute",
+      "provider_name": "Massed Compute",
+      "provider_url": "https://massedcompute.com",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_1x_A6000_high_perf",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 1,
+      "interconnect": "PCIE",
+      "vcpus": 12,
+      "ram_gb": 64,
       "node_price_hr_usd": 0.57,
       "price_per_gpu_hr_usd": 0.57,
       "in_stock": true,
       "live_regions": [
+        "US, Des Moines, IA",
+        "US, Wichita, KS",
+        "US, Kansas City, KS"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "massedcompute",
+      "provider_name": "Massed Compute",
+      "provider_url": "https://massedcompute.com",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_2x_A6000_high_perf",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 2,
+      "interconnect": "PCIE",
+      "vcpus": 30,
+      "ram_gb": 128,
+      "node_price_hr_usd": 1.14,
+      "price_per_gpu_hr_usd": 0.57,
+      "in_stock": true,
+      "live_regions": [
+        "US, Wichita, KS",
+        "US, Kansas City, KS",
+        "US, Des Moines, IA"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "massedcompute",
+      "provider_name": "Massed Compute",
+      "provider_url": "https://massedcompute.com",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_4x_A6000_high_perf",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 4,
+      "interconnect": "PCIE",
+      "vcpus": 54,
+      "ram_gb": 256,
+      "node_price_hr_usd": 2.28,
+      "price_per_gpu_hr_usd": 0.57,
+      "in_stock": true,
+      "live_regions": [
+        "US, Wichita, KS"
+      ],
+      "is_reference": false
+    },
+    {
+      "provider_id": "massedcompute",
+      "provider_name": "Massed Compute",
+      "provider_url": "https://massedcompute.com",
+      "tier": "NeoCloud",
+      "instance_name": "gpu_8x_A6000_high_perf",
+      "gpu_key": "A6000",
+      "gpu_label": "NVIDIA RTX A6000 48GB",
+      "vram_gb": 48,
+      "num_gpus": 8,
+      "interconnect": "PCIE",
+      "vcpus": 110,
+      "ram_gb": 512,
+      "node_price_hr_usd": 4.56,
+      "price_per_gpu_hr_usd": 0.57,
+      "in_stock": false,
+      "live_regions": [
+        "US, Wichita, KS",
         "US, Des Moines, IA"
       ],
       "is_reference": false
@@ -4116,10 +4256,9 @@
       "ram_gb": 400,
       "node_price_hr_usd": 4.36,
       "price_per_gpu_hr_usd": 1.09,
-      "in_stock": false,
+      "in_stock": true,
       "live_regions": [
-        "IN, Mumbai",
-        "US, Chicago, IL"
+        "US, Dallas, TX"
       ],
       "is_reference": false
     },
