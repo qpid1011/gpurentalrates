@@ -14,6 +14,12 @@
   },
   "observed_gsc_queries": [
     {
+      "query": "gpu rental prices",
+      "score": 1251,
+      "source": "google_us_autocomplete",
+      "seed": "gpu rental"
+    },
+    {
       "query": "cloud gpu rental",
       "score": 1251,
       "source": "google_us_autocomplete",
@@ -74,46 +80,46 @@
       "seed": "a100 rental"
     },
     {
-      "query": "gpu rental prices",
+      "query": "gpu rental price tracker",
       "score": 1150,
       "source": "google_us_autocomplete",
       "seed": "gpu rental"
     },
     {
+      "query": "cloud gpu providers",
+      "score": 1100,
+      "source": "google_us_autocomplete",
+      "seed": "cloud gpu"
+    },
+    {
       "query": "rtx 6000 ada price",
+      "score": 1100,
+      "source": "google_us_autocomplete",
+      "seed": "rtx 6000 ada"
+    },
+    {
+      "query": "rtx 6000 ada 48gb",
       "score": 1050,
       "source": "google_us_autocomplete",
       "seed": "rtx 6000 ada"
     },
     {
-      "query": "cloud gpu providers",
-      "score": 1000,
-      "source": "google_us_autocomplete",
-      "seed": "cloud gpu"
-    },
-    {
-      "query": "rtx 6000 ada 48gb",
-      "score": 1000,
-      "source": "google_us_autocomplete",
-      "seed": "rtx 6000 ada"
-    },
-    {
-      "query": "gpu rental price tracker",
-      "score": 850,
-      "source": "google_us_autocomplete",
-      "seed": "gpu rental"
-    },
-    {
       "query": "rtx 6000 ada generation",
-      "score": 850,
+      "score": 1000,
       "source": "google_us_autocomplete",
       "seed": "rtx 6000 ada"
     },
     {
       "query": "l40s gpu memory",
-      "score": 800,
+      "score": 950,
       "source": "google_us_autocomplete",
       "seed": "l40s gpu"
+    },
+    {
+      "query": "h100 rental price index",
+      "score": 850,
+      "source": "google_us_autocomplete",
+      "seed": "h100 rental"
     },
     {
       "query": "h200 rental price index",
@@ -129,9 +135,15 @@
     },
     {
       "query": "rtx 6000 ada vs rtx 5090",
-      "score": 700,
+      "score": 750,
       "source": "google_us_autocomplete",
       "seed": "rtx 6000 ada"
+    },
+    {
+      "query": "h100 rental index",
+      "score": 700,
+      "source": "google_us_autocomplete",
+      "seed": "h100 rental"
     },
     {
       "query": "cloud gpu gaming",
@@ -140,28 +152,16 @@
       "seed": "cloud gpu"
     },
     {
-      "query": "h100 rental price index",
+      "query": "h100 rental price over time",
       "score": 650,
       "source": "google_us_autocomplete",
       "seed": "h100 rental"
-    },
-    {
-      "query": "gpu rental cost",
-      "score": 603,
-      "source": "google_us_autocomplete",
-      "seed": "gpu rental"
     },
     {
       "query": "gpu rental for ai",
       "score": 602,
       "source": "google_us_autocomplete",
       "seed": "gpu rental"
-    },
-    {
-      "query": "h100 rental price chart",
-      "score": 602,
-      "source": "google_us_autocomplete",
-      "seed": "h100 rental"
     }
   ],
   "pages": [
