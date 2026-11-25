@@ -7,33 +7,193 @@
     "max_total_pages": 15,
     "freeze_homepage_title_h1": true,
     "striking_distance_min_impressions": 2,
-    "striking_distance_position_range": [8, 80]
+    "striking_distance_position_range": [
+      8,
+      80
+    ]
   },
-  "observed_gsc_queries": [],
+  "observed_gsc_queries": [
+    {
+      "query": "cloud gpu rental",
+      "score": 1251,
+      "source": "google_us_autocomplete",
+      "seed": "cloud gpu"
+    },
+    {
+      "query": "a100 rental price",
+      "score": 1251,
+      "source": "google_us_autocomplete",
+      "seed": "a100 rental"
+    },
+    {
+      "query": "gpu rental rates",
+      "score": 1250,
+      "source": "google_us_autocomplete",
+      "seed": "gpu rental"
+    },
+    {
+      "query": "cloud gpu pricing",
+      "score": 1250,
+      "source": "google_us_autocomplete",
+      "seed": "cloud gpu"
+    },
+    {
+      "query": "h100 rental price",
+      "score": 1250,
+      "source": "google_us_autocomplete",
+      "seed": "h100 rental"
+    },
+    {
+      "query": "h200 rental price",
+      "score": 1250,
+      "source": "google_us_autocomplete",
+      "seed": "h200 rental"
+    },
+    {
+      "query": "b200 gpu price",
+      "score": 1250,
+      "source": "google_us_autocomplete",
+      "seed": "b200 gpu"
+    },
+    {
+      "query": "l40s gpu price",
+      "score": 1250,
+      "source": "google_us_autocomplete",
+      "seed": "l40s gpu"
+    },
+    {
+      "query": "rtx 4090 cloud gpu",
+      "score": 1250,
+      "source": "google_us_autocomplete",
+      "seed": "rtx 4090 cloud"
+    },
+    {
+      "query": "a100 rental price over time",
+      "score": 1250,
+      "source": "google_us_autocomplete",
+      "seed": "a100 rental"
+    },
+    {
+      "query": "gpu rental prices",
+      "score": 1150,
+      "source": "google_us_autocomplete",
+      "seed": "gpu rental"
+    },
+    {
+      "query": "rtx 6000 ada price",
+      "score": 1050,
+      "source": "google_us_autocomplete",
+      "seed": "rtx 6000 ada"
+    },
+    {
+      "query": "cloud gpu providers",
+      "score": 1000,
+      "source": "google_us_autocomplete",
+      "seed": "cloud gpu"
+    },
+    {
+      "query": "rtx 6000 ada 48gb",
+      "score": 1000,
+      "source": "google_us_autocomplete",
+      "seed": "rtx 6000 ada"
+    },
+    {
+      "query": "gpu rental price tracker",
+      "score": 850,
+      "source": "google_us_autocomplete",
+      "seed": "gpu rental"
+    },
+    {
+      "query": "rtx 6000 ada generation",
+      "score": 850,
+      "source": "google_us_autocomplete",
+      "seed": "rtx 6000 ada"
+    },
+    {
+      "query": "l40s gpu memory",
+      "score": 800,
+      "source": "google_us_autocomplete",
+      "seed": "l40s gpu"
+    },
+    {
+      "query": "h200 rental price index",
+      "score": 751,
+      "source": "google_us_autocomplete",
+      "seed": "h200 rental"
+    },
+    {
+      "query": "h200 rental price chart",
+      "score": 750,
+      "source": "google_us_autocomplete",
+      "seed": "h200 rental"
+    },
+    {
+      "query": "rtx 6000 ada vs rtx 5090",
+      "score": 700,
+      "source": "google_us_autocomplete",
+      "seed": "rtx 6000 ada"
+    },
+    {
+      "query": "cloud gpu gaming",
+      "score": 650,
+      "source": "google_us_autocomplete",
+      "seed": "cloud gpu"
+    },
+    {
+      "query": "h100 rental price index",
+      "score": 650,
+      "source": "google_us_autocomplete",
+      "seed": "h100 rental"
+    },
+    {
+      "query": "gpu rental cost",
+      "score": 603,
+      "source": "google_us_autocomplete",
+      "seed": "gpu rental"
+    },
+    {
+      "query": "gpu rental for ai",
+      "score": 602,
+      "source": "google_us_autocomplete",
+      "seed": "gpu rental"
+    },
+    {
+      "query": "h100 rental price chart",
+      "score": 602,
+      "source": "google_us_autocomplete",
+      "seed": "h100 rental"
+    }
+  ],
   "pages": [
     {
       "slug": "h100-rental-rates",
-      "gpu_keys": ["H100"],
+      "gpu_keys": [
+        "H100"
+      ],
       "target_query": "NVIDIA H100 GPU Rental Rates & Hourly Price",
       "short_label": "NVIDIA H100 80GB",
       "default_gpu_count": 8,
       "default_hours": 72,
       "ref_label": "AWS p5.48xlarge / GCP a3-highgpu-8g List",
-      "interconnect_faq": "Choose H100 SXM5 (900 GB/s NVLink + NVSwitch, 3.35 TB/s HBM3) for multi-GPU 70B–405B distributed training, FSDP/DeepSpeed ZeRO-3, or tensor-parallel FP8 serving where all-reduce communication dominates step time. Choose H100 PCIe Gen5 (128 GB/s bidirectional, 2.0 TB/s HBM2e/HBM3) for single-GPU vLLM inference, LoRA/QLoRA fine-tuning, and batch embeddings at 15%–30% lower hourly rental rates."
+      "interconnect_faq": "Choose H100 SXM5 (900 GB/s NVLink + NVSwitch, 3.35 TB/s HBM3) for multi-GPU 70B\u2013405B distributed training, FSDP/DeepSpeed ZeRO-3, or tensor-parallel FP8 serving where all-reduce communication dominates step time. Choose H100 PCIe Gen5 (128 GB/s bidirectional, 2.0 TB/s HBM2e/HBM3) for single-GPU vLLM inference, LoRA/QLoRA fine-tuning, and batch embeddings at 15%\u201330% lower hourly rental rates."
     },
     {
       "slug": "h200-rental-rates",
-      "gpu_keys": ["H200"],
+      "gpu_keys": [
+        "H200"
+      ],
       "target_query": "NVIDIA H200 141GB Cloud Rental Rates & Hourly Price",
       "short_label": "NVIDIA H200 141GB",
       "default_gpu_count": 8,
       "default_hours": 72,
       "ref_label": "AWS EC2 p5en.48xlarge On-Demand List",
-      "interconnect_faq": "NVIDIA H200 SXM5 pairs 141 GB of HBM3e memory at 4.8 TB/s bandwidth (1.43x H100 bandwidth, 1.76x VRAM) with 900 GB/s NVLink. Rent 4x or 8x H200 SXM5 nodes when serving 70B–120B FP8/BF16 models with long KV-cache contexts (64K–128K tokens) or fitting larger micro-batches without activation checkpointing overhead."
+      "interconnect_faq": "NVIDIA H200 SXM5 pairs 141 GB of HBM3e memory at 4.8 TB/s bandwidth (1.43x H100 bandwidth, 1.76x VRAM) with 900 GB/s NVLink. Rent 4x or 8x H200 SXM5 nodes when serving 70B\u2013120B FP8/BF16 models with long KV-cache contexts (64K\u2013128K tokens) or fitting larger micro-batches without activation checkpointing overhead."
     },
     {
       "slug": "b200-rental-rates",
-      "gpu_keys": ["B200"],
+      "gpu_keys": [
+        "B200"
+      ],
       "target_query": "NVIDIA B200 192GB Blackwell Cloud Rental Rates",
       "short_label": "NVIDIA B200 192GB",
       "default_gpu_count": 8,
@@ -43,33 +203,86 @@
     },
     {
       "slug": "a100-rental-rates",
-      "gpu_keys": ["A100_80G", "A100_40G"],
+      "gpu_keys": [
+        "A100_80G",
+        "A100_40G"
+      ],
       "target_query": "NVIDIA A100 GPU Rental Rates (80GB & 40GB Hourly Pricing)",
       "short_label": "NVIDIA A100 80GB & 40GB",
       "default_gpu_count": 8,
       "default_hours": 72,
       "ref_label": "AWS EC2 p4de.24xlarge (8x A100 80GB) List",
-      "interconnect_faq": "A100 80GB SXM4 provides 2.0 TB/s HBM2e and 600 GB/s NVLink, making it a cost-efficient workhorse for 13B–70B BF16 fine-tuning and multi-GPU PyTorch jobs when Hopper/Blackwell FP8 is unnecessary. A100 40GB (1.55 TB/s HBM2) and PCIe Gen4 variants suit 7B–14B inference, classic CV/audio training, and CI evaluation pipelines."
+      "interconnect_faq": "A100 80GB SXM4 provides 2.0 TB/s HBM2e and 600 GB/s NVLink, making it a cost-efficient workhorse for 13B\u201370B BF16 fine-tuning and multi-GPU PyTorch jobs when Hopper/Blackwell FP8 is unnecessary. A100 40GB (1.55 TB/s HBM2) and PCIe Gen4 variants suit 7B\u201314B inference, classic CV/audio training, and CI evaluation pipelines."
     },
     {
       "slug": "rtx-5090-rental-rates",
-      "gpu_keys": ["RTX5090", "RTX4090"],
+      "gpu_keys": [
+        "RTX5090",
+        "RTX4090"
+      ],
       "target_query": "RTX 5090 & RTX 4090 Cloud GPU Rental Rates",
       "short_label": "RTX 5090 & RTX 4090",
       "default_gpu_count": 4,
       "default_hours": 40,
       "ref_label": "Managed Workstation Cloud GPU List Benchmark",
-      "interconnect_faq": "RTX 5090 (32 GB GDDR7, 1.79 TB/s, PCIe Gen5) and RTX 4090 (24 GB GDDR6X, 1.01 TB/s, PCIe Gen4) omit NVLink/P2P high-speed fabric, so multi-GPU all-reduce traverses host PCIe. Use 1x–4x RTX 5090/4090 instances for quantized LLM inference (AWQ/GGUF/FP8), diffusion/video rendering, LoRA adapters, and embarrassedly parallel batch workers."
+      "interconnect_faq": "RTX 5090 (32 GB GDDR7, 1.79 TB/s, PCIe Gen5) and RTX 4090 (24 GB GDDR6X, 1.01 TB/s, PCIe Gen4) omit NVLink/P2P high-speed fabric, so multi-GPU all-reduce traverses host PCIe. Use 1x\u20134x RTX 5090/4090 instances for quantized LLM inference (AWQ/GGUF/FP8), diffusion/video rendering, LoRA adapters, and embarrassedly parallel batch workers."
     },
     {
       "slug": "b300-rental-rates",
-      "gpu_keys": ["B300"],
+      "gpu_keys": [
+        "B300"
+      ],
       "target_query": "NVIDIA B300 288GB Blackwell Ultra Cloud Rental Rates",
       "short_label": "NVIDIA B300 288GB",
       "default_gpu_count": 8,
       "default_hours": 168,
       "ref_label": "Tier-1 Hyperscaler 8x B300 Ultra Benchmark",
-      "interconnect_faq": "NVIDIA B300 (Blackwell Ultra) expands per-GPU HBM3e capacity to 288 GB (2.3 TB across an 8x SXM6 node) with 1.8 TB/s NVLink 5 and enhanced dense FP4 compute. Rent 8x B300 SXM6 nodes when 405B–1T+ parameter Mixture-of-Experts models or million-token KV caches must reside inside a single high-bandwidth NVSwitch domain."
+      "interconnect_faq": "NVIDIA B300 (Blackwell Ultra) expands per-GPU HBM3e capacity to 288 GB (2.3 TB across an 8x SXM6 node) with 1.8 TB/s NVLink 5 and enhanced dense FP4 compute. Rent 8x B300 SXM6 nodes when 405B\u20131T+ parameter Mixture-of-Experts models or million-token KV caches must reside inside a single high-bandwidth NVSwitch domain."
+    },
+    {
+      "slug": "l40s-rental-rates",
+      "gpu_keys": [
+        "L40S"
+      ],
+      "target_query": "NVIDIA L40S 48GB Cloud GPU Rental Rates & Hourly Pricing",
+      "short_label": "NVIDIA L40S 48GB",
+      "default_gpu_count": 4,
+      "default_hours": 72,
+      "ref_label": "AWS EC2 g6e / Standard Hyperscaler L40S List",
+      "interconnect_faq": "NVIDIA L40S (48 GB GDDR6 ECC, Ada Lovelace FP8 Transformer Engine) omits NVLink, making PCIe Gen4 single-GPU and 2x\u20134x data-parallel inference, multimodal serving, and Omniverse/3D rendering 40%\u201360% cheaper per hour than H100 when HBM3 bandwidth is not the bottleneck."
+    },
+    {
+      "slug": "a6000-rental-rates",
+      "gpu_keys": [
+        "A6000",
+        "RTX6000Ada"
+      ],
+      "target_query": "NVIDIA RTX A6000 & 6000 Ada 48GB Cloud GPU Rental Rates",
+      "short_label": "RTX A6000 & 6000 Ada 48GB",
+      "default_gpu_count": 2,
+      "default_hours": 72,
+      "ref_label": "Managed Cloud Workstation 48GB GPU Benchmark",
+      "interconnect_faq": "RTX A6000 (48 GB Ampere) and RTX 6000 Ada (48 GB Ada Lovelace) provide generous 48 GB VRAM per PCIe slot\u2014ideal for 32B\u201370B quantized vLLM/Ollama serving, LoRA fine-tuning, and Diffusion pipelines that exceed 24 GB consumer cards without paying H100 SXM5 rates."
+    }
+  ],
+  "auto_promotions": [
+    {
+      "slug": "l40s-rental-rates",
+      "iso_week": "2026-W48",
+      "promoted_at_utc": "2026-11-25 02:47 UTC",
+      "trigger_query": "l40s gpu price",
+      "trigger_score": 1250,
+      "trigger_source": "google_us_autocomplete",
+      "live_offers_verified": 19
+    },
+    {
+      "slug": "a6000-rental-rates",
+      "iso_week": "2026-W48",
+      "promoted_at_utc": "2026-11-25 02:47 UTC",
+      "trigger_query": "rtx a6000 release date",
+      "trigger_score": 601,
+      "trigger_source": "google_us_autocomplete",
+      "live_offers_verified": 34
     }
   ]
 }

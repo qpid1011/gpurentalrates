@@ -27,6 +27,7 @@ jobs:
       - name: Fetch live multi-cloud GPU prices, stock, SSR subpages & daily history snapshot
         run: |
           python3 scripts/sync_gpu_rates.py
+          python3 scripts/discover_seo_queries.py
           python3 scripts/prerender_seo.py
           python3 scripts/build_seo_pages.py
       - name: Commit updated gpu_rates.json, SSR index/subpages, sitemap & history archive
