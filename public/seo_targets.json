@@ -14,7 +14,7 @@
   },
   "observed_gsc_queries": [
     {
-      "query": "gpu rental prices",
+      "query": "gpu rental price",
       "score": 1252,
       "source": "google_us_autocomplete",
       "seed": "gpu rental"
@@ -99,7 +99,7 @@
     },
     {
       "query": "rtx 6000 ada generation",
-      "score": 900,
+      "score": 950,
       "source": "google_us_autocomplete",
       "seed": "rtx 6000 ada"
     },
@@ -122,10 +122,22 @@
       "seed": "h200 rental"
     },
     {
+      "query": "h100 rental index",
+      "score": 750,
+      "source": "google_us_autocomplete",
+      "seed": "h100 rental"
+    },
+    {
       "query": "l40s gpu memory",
       "score": 701,
       "source": "google_us_autocomplete",
       "seed": "l40s gpu"
+    },
+    {
+      "query": "h100 rental price chart",
+      "score": 700,
+      "source": "google_us_autocomplete",
+      "seed": "h100 rental"
     },
     {
       "query": "l40s gpu vs a100",
@@ -134,34 +146,22 @@
       "seed": "l40s gpu"
     },
     {
-      "query": "h100 rental index",
-      "score": 651,
-      "source": "google_us_autocomplete",
-      "seed": "h100 rental"
-    },
-    {
-      "query": "cloud gpu services",
-      "score": 650,
-      "source": "google_us_autocomplete",
-      "seed": "cloud gpu"
-    },
-    {
-      "query": "h100 rental price chart",
-      "score": 650,
-      "source": "google_us_autocomplete",
-      "seed": "h100 rental"
-    },
-    {
       "query": "l40s gpu vram",
-      "score": 604,
+      "score": 605,
       "source": "google_us_autocomplete",
       "seed": "l40s gpu"
     },
     {
       "query": "l40s gpu vs h100",
-      "score": 603,
+      "score": 604,
       "source": "google_us_autocomplete",
       "seed": "l40s gpu"
+    },
+    {
+      "query": "cloud gpu services",
+      "score": 603,
+      "source": "google_us_autocomplete",
+      "seed": "cloud gpu"
     }
   ],
   "pages": [
